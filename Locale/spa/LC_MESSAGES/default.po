@@ -1,0 +1,2310 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-09-12 14:52-0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: es_CL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: Controller/AcceptedReceptionsController.php:37;106;145
+msgid "Invalid accepted reception"
+msgstr "Recepción conforme inválida"
+
+#: Controller/AcceptedReceptionsController.php:85;111
+msgid "The accepted reception has been saved"
+msgstr "La recepción conforme ha sido guardado"
+
+#: Controller/AcceptedReceptionsController.php:88;114
+msgid "The accepted reception could not be saved. Please, try again."
+msgstr "La recepción conforme no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/AcceptedReceptionsController.php:148
+msgid "Accepted reception deleted"
+msgstr "Recepción conforme eliminada"
+
+#: Controller/AcceptedReceptionsController.php:151
+msgid "Accepted reception was not deleted"
+msgstr "La recepción conforme no fue eliminada"
+
+#: Controller/AlertTypesController.php:37;70;99
+msgid "Invalid alert type"
+msgstr ""
+
+#: Controller/AlertTypesController.php:52;74
+msgid "The alert type has been saved"
+msgstr ""
+
+#: Controller/AlertTypesController.php:55;77
+msgid "The alert type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AlertTypesController.php:102
+msgid "Alert type deleted"
+msgstr ""
+
+#: Controller/AlertTypesController.php:105
+msgid "Alert type was not deleted"
+msgstr ""
+
+#: Controller/AppController.php:75
+msgid "Aqua"
+msgstr "Agua"
+
+#: Controller/AppController.php:75
+msgid "Green"
+msgstr "Verde"
+
+#: Controller/AppController.php:75
+msgid "Yellow"
+msgstr "Amarillo"
+
+#: Controller/AppController.php:75
+msgid "Red"
+msgstr "Rojo"
+
+#: Controller/AppController.php:77 View/AcceptedReceptions/pdf/pdf.ctp:32
+msgid "No"
+msgstr "No"
+
+#: Controller/AppController.php:77 View/AcceptedReceptions/pdf/pdf.ctp:32
+msgid "Yes"
+msgstr "Si"
+
+#: Controller/AppController.php:79
+msgid "Framework Agreement"
+msgstr "Convenio Marco"
+
+#: Controller/AppController.php:79
+msgid "Public Tender"
+msgstr "Licitación Pública"
+
+#: Controller/AppController.php:79
+msgid "Direct Deal"
+msgstr "Trato Directo"
+
+#: Controller/AppController.php:81
+msgid "Very good"
+msgstr "Muy Bueno"
+
+#: Controller/AppController.php:81
+msgid "Good"
+msgstr "Bueno"
+
+#: Controller/AppController.php:81
+msgid "Regular"
+msgstr "Regular"
+
+#: Controller/AppController.php:81
+msgid "Bad"
+msgstr "Malo"
+
+#: Controller/AttachmentTypesController.php:37;70;99
+msgid "Invalid attachment type"
+msgstr ""
+
+#: Controller/AttachmentTypesController.php:52;74
+msgid "The attachment type has been saved"
+msgstr ""
+
+#: Controller/AttachmentTypesController.php:55;77
+msgid "The attachment type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AttachmentTypesController.php:102
+msgid "Attachment type deleted"
+msgstr ""
+
+#: Controller/AttachmentTypesController.php:105
+msgid "Attachment type was not deleted"
+msgstr ""
+
+#: Controller/AttachmentsController.php:37;73;105
+msgid "Invalid attachment"
+msgstr "Adjunto inválido"
+
+#: Controller/AttachmentsController.php:52;77
+msgid "The attachment has been saved"
+msgstr "El archivo adjunto se ha guardado"
+
+#: Controller/AttachmentsController.php:55;80
+msgid "The attachment could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/AttachmentsController.php:108
+msgid "Attachment deleted"
+msgstr "Archivo adjunto eliminado"
+
+#: Controller/AttachmentsController.php:111
+msgid "Attachment was not deleted"
+msgstr "El archivo adjunto no fue eliminado"
+
+#: Controller/DashboardsController.php:40;76;108
+msgid "Invalid dashboard"
+msgstr "Menú inválido"
+
+#: Controller/DashboardsController.php:55;80
+msgid "The dashboard has been saved"
+msgstr "El menú se ha guardado"
+
+#: Controller/DashboardsController.php:58;83
+msgid "The dashboard could not be saved. Please, try again."
+msgstr "El meú no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/DashboardsController.php:111
+msgid "Dashboard deleted"
+msgstr "Menú borrado"
+
+#: Controller/DashboardsController.php:114
+msgid "Dashboard was not deleted"
+msgstr "El mwnú no se eliminó"
+
+#: Controller/GroupsController.php:37;70;99
+msgid "Invalid group"
+msgstr "Grupo inválido"
+
+#: Controller/GroupsController.php:52;74
+msgid "The group has been saved"
+msgstr "El grupo se ha guardado"
+
+#: Controller/GroupsController.php:55;77
+msgid "The group could not be saved. Please, try again."
+msgstr "El grupo no pudo ser guardado. Inténtalo de nuevo."
+
+#: Controller/GroupsController.php:102
+msgid "Group deleted"
+msgstr "Grupo eliminado"
+
+#: Controller/GroupsController.php:105
+msgid "Group was not deleted"
+msgstr "Grupo no fue eliminado"
+
+#: Controller/HolidaysController.php:39;72;101
+#, fuzzy
+#| msgid "Invalid dashboard"
+msgid "Invalid holiday"
+msgstr "Menú inválido"
+
+#: Controller/HolidaysController.php:54;76
+#, fuzzy
+#| msgid "The memo has been saved"
+msgid "The holiday has been saved"
+msgstr "El memorándum se genero correctamente"
+
+#: Controller/HolidaysController.php:57;79
+#, fuzzy
+#| msgid "The memo could not be saved. Please, try again."
+msgid "The holiday could not be saved. Please, try again."
+msgstr "El memorándum no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/HolidaysController.php:104
+#, fuzzy
+#| msgid "Group deleted"
+msgid "Holiday deleted"
+msgstr "Grupo eliminado"
+
+#: Controller/HolidaysController.php:107
+#, fuzzy
+#| msgid "Group was not deleted"
+msgid "Holiday was not deleted"
+msgstr "Grupo no fue eliminado"
+
+#: Controller/MattersController.php:39;78;107
+#, fuzzy
+#| msgid "Invalid user"
+msgid "Invalid matter"
+msgstr "Usuario invalido"
+
+#: Controller/MattersController.php:60;82
+#, fuzzy
+#| msgid "The user has been saved"
+msgid "The matter has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/MattersController.php:63;85
+#, fuzzy
+#| msgid "The user could not be saved. Please, try again."
+msgid "The matter could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/MattersController.php:110
+#, fuzzy
+#| msgid "User deleted"
+msgid "Matter deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/MattersController.php:113
+#, fuzzy
+#| msgid "User was not deleted"
+msgid "Matter was not deleted"
+msgstr "Usuario no fue eliminado"
+
+#: Controller/MemoAlertsController.php:37;74;107
+msgid "Invalid memo alert"
+msgstr ""
+
+#: Controller/MemoAlertsController.php:52;78
+msgid "The memo alert has been saved"
+msgstr ""
+
+#: Controller/MemoAlertsController.php:55;81
+msgid "The memo alert could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemoAlertsController.php:110
+msgid "Memo alert deleted"
+msgstr ""
+
+#: Controller/MemoAlertsController.php:113
+msgid "Memo alert was not deleted"
+msgstr ""
+
+#: Controller/MemoTrackingTypesController.php:37;70;99
+msgid "Invalid memo tracking type"
+msgstr ""
+
+#: Controller/MemoTrackingTypesController.php:52;74
+msgid "The memo tracking type has been saved"
+msgstr ""
+
+#: Controller/MemoTrackingTypesController.php:55;77
+msgid "The memo tracking type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemoTrackingTypesController.php:102
+msgid "Memo tracking type deleted"
+msgstr ""
+
+#: Controller/MemoTrackingTypesController.php:105
+msgid "Memo tracking type was not deleted"
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:40;76;108
+msgid "Invalid memo tracking"
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:55;80
+msgid "The memo tracking has been saved"
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:58;83
+msgid "The memo tracking could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:111
+msgid "Memo tracking deleted"
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:114
+msgid "Memo tracking was not deleted"
+msgstr ""
+
+#: Controller/MemoTrackingsController.php:144 View/Memos/index.ctp:612
+msgid "The memo has been rejected."
+msgstr "El memorándum ha sido devuelto."
+
+#: Controller/MemoTrackingsController.php:189
+msgid "The memo has been shunted."
+msgstr "El memorándum ha sido derivado"
+
+#: Controller/MemoTypesController.php:37;70;99
+msgid "Invalid memo type"
+msgstr ""
+
+#: Controller/MemoTypesController.php:52;74
+msgid "The memo type has been saved"
+msgstr ""
+
+#: Controller/MemoTypesController.php:55;77
+msgid "The memo type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MemoTypesController.php:102
+msgid "Memo type deleted"
+msgstr ""
+
+#: Controller/MemoTypesController.php:105
+msgid "Memo type was not deleted"
+msgstr ""
+
+#: Controller/MemosController.php:116;168;218;769
+msgid "Invalid memo"
+msgstr ""
+
+#: Controller/MemosController.php:281;577
+msgid "The user or users entered are not valid. Please revise."
+msgstr "El usuario o usuarios ingresados ​​no son válidos. Por favor revisar."
+
+#: Controller/MemosController.php:492;725;1356
+msgid "The memo "
+msgstr "El memo "
+
+#: Controller/MemosController.php:492;725
+msgid " has been sended"
+msgstr " ha sido enviado"
+
+#: Controller/MemosController.php:494
+msgid "Draft successfully generated."
+msgstr "Borrador generado con éxito."
+
+#: Controller/MemosController.php:500;738;1358
+msgid "The memo could not be saved. Please, try again."
+msgstr "El memorándum no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/MemosController.php:727
+msgid "The memo has been sended"
+msgstr "El memorándum ha sido enviado"
+
+#: Controller/MemosController.php:730
+msgid "Memo successfully edited."
+msgstr "Memorándum editado con éxito."
+
+#: Controller/MemosController.php:732
+msgid "Draft successfully edited."
+msgstr "Borrador editado con éxito."
+
+#: Controller/MemosController.php:772
+msgid "Memo deleted"
+msgstr ""
+
+#: Controller/MemosController.php:775
+msgid "Memo was not deleted"
+msgstr ""
+
+#: Controller/MemosController.php:844;995;1032;1137;1240;1246
+msgid "No information"
+msgstr "Sin Información"
+
+#: Controller/MemosController.php:938
+msgid "this memo does not contain associated attachments"
+msgstr "este memorándum no contiene archivos adjuntos asociados"
+
+#: Controller/MemosController.php:1096
+msgid "Problem during sending email."
+msgstr "Problema durante el envío de correo electrónico."
+
+#: Controller/MemosController.php:1356
+msgid " has been saved"
+msgstr " ha sido creado"
+
+#: Controller/MemosController.php:1361
+msgid "The memorandum is missing the addressees. Please, try again."
+msgstr "Al memorándum le faltan los destinatarios. Inténtalo de nuevo."
+
+#: Controller/MimeTypesController.php:41;78;111
+msgid "Invalid mime type"
+msgstr "Tipo Archico inválido"
+
+#: Controller/MimeTypesController.php:56;82
+msgid "The mime type has been saved"
+msgstr "El tipo de archivo ha sido guardado"
+
+#: Controller/MimeTypesController.php:59;85
+msgid "The mime type could not be saved. Please, try again."
+msgstr "El tipo de archivo no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/MimeTypesController.php:114
+msgid "Mime type deleted"
+msgstr "Tipo de archivo eliminado"
+
+#: Controller/MimeTypesController.php:117
+msgid "Mime type was not deleted"
+msgstr "Tipo de archivo no fue eliminado"
+
+#: Controller/OrganizationUnitsController.php:37;72;103
+msgid "Invalid organization unit"
+msgstr ""
+
+#: Controller/OrganizationUnitsController.php:52;76
+msgid "The organization unit has been saved"
+msgstr ""
+
+#: Controller/OrganizationUnitsController.php:55;79
+msgid "The organization unit could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OrganizationUnitsController.php:106
+msgid "Organization unit deleted"
+msgstr ""
+
+#: Controller/OrganizationUnitsController.php:109
+msgid "Organization unit was not deleted"
+msgstr ""
+
+#: Controller/SharesController.php:37;73;105
+#, fuzzy
+#| msgid "Invalid dashboard"
+msgid "Invalid share"
+msgstr "Menú inválido"
+
+#: Controller/SharesController.php:53;78
+#, fuzzy
+#| msgid "The user has been saved"
+msgid "The share has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/SharesController.php:56;81
+#, fuzzy
+#| msgid "The user could not be saved. Please, try again."
+msgid "The share could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/SharesController.php:108
+#, fuzzy
+#| msgid "User deleted"
+msgid "Share deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/SharesController.php:111
+#, fuzzy
+#| msgid "User was not deleted"
+msgid "Share was not deleted"
+msgstr "Usuario no fue eliminado"
+
+#: Controller/SubrogancesController.php:38;71;100
+#, fuzzy
+#| msgid "Invalid dashboard"
+msgid "Invalid subrogance"
+msgstr "Menú inválido"
+
+#: Controller/SubrogancesController.php:53;75
+#, fuzzy
+#| msgid "The user has been saved"
+msgid "The subrogance has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/SubrogancesController.php:56;78
+#, fuzzy
+#| msgid "The user could not be saved. Please, try again."
+msgid "The subrogance could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/SubrogancesController.php:103
+#, fuzzy
+#| msgid "Group deleted"
+msgid "Subrogance deleted"
+msgstr "Grupo eliminado"
+
+#: Controller/SubrogancesController.php:106
+#, fuzzy
+#| msgid "Group was not deleted"
+msgid "Subrogance was not deleted"
+msgstr "Grupo no fue eliminado"
+
+#: Controller/SupplierRatingsController.php:37;113;153
+msgid "Invalid supplier rating"
+msgstr "Calificación al proveedor inválida"
+
+#: Controller/SupplierRatingsController.php:90;117
+msgid "The supplier rating has been saved"
+msgstr "La calificación al proveedor ha sido guardada"
+
+#: Controller/SupplierRatingsController.php:93;120
+msgid "The supplier rating could not be saved. Please, try again."
+msgstr "La calificación al proveedor no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/SupplierRatingsController.php:156
+msgid "Supplier rating deleted"
+msgstr "La calificación al proveedor fue eliminada"
+
+#: Controller/SupplierRatingsController.php:159
+msgid "Supplier rating was not deleted"
+msgstr "La calificación al proveedor no fue eliminada"
+
+#: Controller/UnitsController.php:37;75;109
+#, fuzzy
+#| msgid "Invalid user"
+msgid "Invalid unit"
+msgstr "Usuario invalido"
+
+#: Controller/UnitsController.php:55;82
+#, fuzzy
+#| msgid "The user has been saved"
+msgid "The unit has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/UnitsController.php:58;85
+#, fuzzy
+#| msgid "The user could not be saved. Please, try again."
+msgid "The unit could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/UnitsController.php:112
+#, fuzzy
+#| msgid "User deleted"
+msgid "Unit deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/UnitsController.php:115
+#, fuzzy
+#| msgid "User was not deleted"
+msgid "Unit was not deleted"
+msgstr "Usuario no fue eliminado"
+
+#: Controller/UsersController.php:57;95;128
+msgid "Invalid user"
+msgstr "Usuario invalido"
+
+#: Controller/UsersController.php:73;99
+msgid "The user has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/UsersController.php:76;102
+msgid "The user could not be saved. Please, try again."
+msgstr "El archivo adjunto no se pudo guardar. Inténtalo de nuevo."
+
+#: Controller/UsersController.php:131
+msgid "User deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/UsersController.php:134
+msgid "User was not deleted"
+msgstr "Usuario no fue eliminado"
+
+#: Controller/UsersController.php:174
+msgid "Your username, password or code was incorrect."
+msgstr "Su usuario o contraseña están incorrectos."
+
+#: Controller/UsersController.php:246
+msgid "Good-Bye."
+msgstr "Sesión finalizada correctamente."
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:111
+msgid "<success>Aco Update Complete</success>"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:156
+msgid "Deleted %s and all children"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:197
+msgid "Created Aco node: %s"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:232
+msgid "Deleted Aco node %s"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:242
+msgid "Better manage, and easily synchronize you application's ACO tree"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:244
+msgid ""
+"Add new ACOs for new controllers and actions. Does not remove nodes from the "
+"ACO table."
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:246
+msgid ""
+"Perform a full sync on the ACO table.Will create new ACOs or missing "
+"controllers and actions.Will also remove orphaned entries that no longer "
+"have a matching controller/action"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:250
+msgid "Verify the tree structure of either your Aco or Aro Trees"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:255
+msgid "The type of tree to verify"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:261
+msgid "Recover a corrupted Tree"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:266
+msgid "The type of tree to recover"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:285
+msgid "Tree is valid and strong"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:302
+msgid "Tree has been recovered, or tree did not need recovery."
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:304
+msgid "<error>Tree recovery failed.</error>"
+msgstr ""
+
+#: Plugin/Captcha/View/Helper/CaptchaHelper.php:38
+msgid "Can't read? Reload"
+msgstr "No se puede leer? Recargar"
+
+#: Plugin/Captcha/View/Helper/CaptchaHelper.php:40
+msgid "<p>Answer Simple Math</p>"
+msgstr ""
+
+#: Plugin/Captcha/View/Helper/CaptchaHelper.php:61
+msgid "<i class=\"glyphicon glyphicon-refresh\"></i> "
+msgstr "<i class=\"glyphicon glyphicon-refresh\"></i> "
+
+#: Plugin/Captcha/View/Helper/CaptchaHelper.php:63
+msgid "enter code"
+msgstr "código"
+
+#: View/AcceptedReceptions/add.ctp:8 View/AcceptedReceptions/edit.ctp:7
+#: View/AcceptedReceptions/view.ctp:6 View/AcceptedReceptions/pdf/pdf.ctp:2
+#: View/Elements/detail.ctp:180 View/Memos/add.ctp:479
+#: View/Memos/time_line.ctp:145;149;158 View/Memos/view.ctp:182
+msgid "Accepted Reception"
+msgstr "Recepción Conforme"
+
+#: View/AcceptedReceptions/add.ctp:14 View/AcceptedReceptions/edit.ctp:20
+#: View/AcceptedReceptions/view.ctp:16 View/AcceptedReceptions/pdf/pdf.ctp:6
+#: View/Memos/add.ctp:489
+msgid "Name of the contracted service / goods or products purchased:"
+msgstr "Nombre del servicio contratado/bienes o productos adquiridos:"
+
+#: View/AcceptedReceptions/add.ctp:23 View/AcceptedReceptions/edit.ctp:29
+#: View/AcceptedReceptions/view.ctp:25 View/AcceptedReceptions/pdf/pdf.ctp:14
+#: View/Memos/add.ctp:498
+msgid "Supplier Name:"
+msgstr "Nombre Proveedor:"
+
+#: View/AcceptedReceptions/add.ctp:29 View/AcceptedReceptions/edit.ctp:35
+#: View/AcceptedReceptions/view.ctp:31 View/AcceptedReceptions/pdf/pdf.ctp:16
+#: View/Memos/add.ctp:504
+msgid "Supplier Rut:"
+msgstr "RUT Proveedor:"
+
+#: View/AcceptedReceptions/add.ctp:35 View/AcceptedReceptions/edit.ctp:43
+#: View/AcceptedReceptions/view.ctp:39 View/AcceptedReceptions/pdf/pdf.ctp:20
+#: View/Memos/add.ctp:510
+msgid "Purchase Order:"
+msgstr "Orden de Compra N°:"
+
+#: View/AcceptedReceptions/add.ctp:41 View/AcceptedReceptions/edit.ctp:49
+#: View/AcceptedReceptions/view.ctp:45 View/AcceptedReceptions/pdf/pdf.ctp:22
+#: View/Memos/add.ctp:516
+msgid "Amount:"
+msgstr "Monto:"
+
+#: View/AcceptedReceptions/add.ctp:48 View/AcceptedReceptions/edit.ctp:56
+#: View/AcceptedReceptions/view.ctp:52 View/AcceptedReceptions/pdf/pdf.ctp:27
+#: View/Memos/add.ctp:523
+msgid "With date, "
+msgstr "Con fecha, "
+
+#: View/AcceptedReceptions/add.ctp:48 View/AcceptedReceptions/edit.ctp:56
+#: View/AcceptedReceptions/view.ctp:52 View/AcceptedReceptions/pdf/pdf.ctp:27
+#: View/Memos/add.ctp:523
+msgid ""
+", it has been accepted by the Ministry of Women and Gender Equality to the "
+"satisfaction of the undersigned, as detailed below:"
+msgstr ""
+", se ha recepcionado conforme por parte del Ministerio de la Mujer y la "
+"Equidad de Género a entera satisfacción de quién suscribe según detalle "
+"adjunto:"
+
+#: View/AcceptedReceptions/add.ctp:52 View/AcceptedReceptions/edit.ctp:60
+#: View/AcceptedReceptions/view.ctp:56 View/AcceptedReceptions/pdf/pdf.ctp:35
+#: View/Memos/add.ctp:527
+msgid "Purchase Order Reception 100%:"
+msgstr "Orden de Compra Recepcionada 100:"
+
+#: View/AcceptedReceptions/add.ctp:58 View/AcceptedReceptions/edit.ctp:66
+#: View/AcceptedReceptions/view.ctp:62 View/AcceptedReceptions/pdf/pdf.ctp:39
+#: View/Memos/add.ctp:533
+msgid "Purchase Order Partially Received:"
+msgstr "Orden de Compra Recepcionada Parcialmente:"
+
+#: View/AcceptedReceptions/add.ctp:65 View/AcceptedReceptions/edit.ctp:73
+#: View/AcceptedReceptions/view.ctp:69 View/AcceptedReceptions/pdf/pdf.ctp:44
+#: View/Memos/add.ctp:540
+msgid "Detail of attached documents:"
+msgstr "Detalle de documentos adjuntos:"
+
+#: View/AcceptedReceptions/add.ctp:70 View/AcceptedReceptions/edit.ctp:78
+#: View/AcceptedReceptions/view.ctp:74
+#: View/AcceptedReceptions/pdf/pdf.ctp:31;48 View/Memos/add.ctp:545
+msgid "Concept"
+msgstr "Concepto"
+
+#: View/AcceptedReceptions/add.ctp:72 View/AcceptedReceptions/edit.ctp:80
+#: View/AcceptedReceptions/view.ctp:76 View/AcceptedReceptions/pdf/pdf.ctp:53
+#: View/Memos/add.ctp:547
+msgid "Office Guide"
+msgstr "Guía de Despacho"
+
+#: View/AcceptedReceptions/add.ctp:76 View/AcceptedReceptions/edit.ctp:84
+#: View/AcceptedReceptions/view.ctp:80 View/AcceptedReceptions/pdf/pdf.ctp:49
+#: View/Memos/add.ctp:551 View/Memos/search.ctp:36
+msgid "Number"
+msgstr "Número"
+
+#: View/AcceptedReceptions/add.ctp:82 View/AcceptedReceptions/edit.ctp:90
+#: View/AcceptedReceptions/view.ctp:86 View/AcceptedReceptions/pdf/pdf.ctp:50
+#: View/Memos/add.ctp:557 View/Memos/pdf/pdf.ctp:50
+msgid "Date"
+msgstr "Fecha"
+
+#: View/AcceptedReceptions/add.ctp:91 View/AcceptedReceptions/edit.ctp:100
+#: View/AcceptedReceptions/view.ctp:96 View/AcceptedReceptions/pdf/pdf.ctp:58
+#: View/Memos/add.ctp:566
+msgid "Invoice"
+msgstr "Factura"
+
+#: View/AcceptedReceptions/add.ctp:108 View/AcceptedReceptions/edit.ctp:118
+#: View/AcceptedReceptions/view.ctp:114 View/AcceptedReceptions/pdf/pdf.ctp:63
+#: View/Memos/add.ctp:583
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#: View/AcceptedReceptions/add.ctp:125 View/AcceptedReceptions/edit.ctp:136
+#: View/Memos/add.ctp:465;602 View/Memos/edit.ctp:217
+#: View/SupplierRatings/add.ctp:216 View/SupplierRatings/edit.ctp:223
+msgid "Save"
+msgstr "Guardar"
+
+#: View/AcceptedReceptions/edit.ctp:10 View/Memos/add.ctp:12
+#: View/Memos/time_line.ctp:4 View/SupplierRatings/edit.ctp:10
+msgid "<i class=\"glyphicon glyphicon-chevron-left\"></i> Back"
+msgstr "<i class=\"glyphicon glyphicon-chevron-left\"></i> Volver"
+
+#: View/AcceptedReceptions/index.ctp:7
+msgid "Accepted Receptions"
+msgstr "Recepciones Conformes"
+
+#: View/AcceptedReceptions/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Accepted Reception"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nueva Recepción Conforme"
+
+#: View/AcceptedReceptions/index.ctp:33 View/AlertTypes/index.ctp:21
+#: View/AlertTypes/view.ctp:66 View/AttachmentTypes/index.ctp:20
+#: View/AttachmentTypes/view.ctp:65 View/Attachments/index.ctp:26
+#: View/Dashboards/index.ctp:24 View/Elements/detail.ctp:174;254
+#: View/Groups/index.ctp:20 View/Groups/view.ctp:62 View/Holidays/index.ctp:20
+#: View/Matters/index.ctp:20 View/Matters/view.ctp:66
+#: View/MemoAlerts/index.ctp:23 View/MemoTrackingTypes/index.ctp:20
+#: View/MemoTrackingTypes/view.ctp:63 View/MemoTrackings/index.ctp:25
+#: View/MemoTypes/index.ctp:20 View/MemoTypes/view.ctp:64
+#: View/Memos/add.ctp:147 View/Memos/edit.ctp:149 View/Memos/search.ctp:38
+#: View/Memos/view.ctp:176;256 View/MimeTypes/index.ctp:22
+#: View/OrganizationUnits/index.ctp:21 View/OrganizationUnits/view.ctp:65;116
+#: View/Shares/index.ctp:20 View/Shares/view.ctp:65
+#: View/Subrogances/index.ctp:22 View/SupplierRatings/index.ctp:35
+#: View/Units/index.ctp:22 View/Units/view.ctp:73;125 View/Users/index.ctp:22
+msgid "Actions"
+msgstr "Acciones"
+
+#: View/AcceptedReceptions/index.ctp:59 View/AlertTypes/index.ctp:33
+#: View/AlertTypes/view.ctp:81 View/AttachmentTypes/index.ctp:31
+#: View/AttachmentTypes/view.ctp:84 View/Attachments/index.ctp:47
+#: View/Dashboards/index.ctp:41 View/Groups/index.ctp:31
+#: View/Groups/view.ctp:77 View/Holidays/index.ctp:31 View/Matters/index.ctp:31
+#: View/Matters/view.ctp:86 View/MemoAlerts/index.ctp:43
+#: View/MemoTrackingTypes/index.ctp:31 View/MemoTrackingTypes/view.ctp:80
+#: View/MemoTrackings/index.ctp:45 View/MemoTypes/index.ctp:31
+#: View/MemoTypes/view.ctp:82 View/MimeTypes/index.ctp:34
+#: View/OrganizationUnits/index.ctp:35 View/OrganizationUnits/view.ctp:79;133
+#: View/Shares/index.ctp:33 View/Shares/view.ctp:79
+#: View/Subrogances/index.ctp:35 View/SupplierRatings/index.ctp:63
+#: View/Units/index.ctp:37 View/Units/view.ctp:90;140 View/Users/index.ctp:36
+msgid "<i class=\"glyphicon glyphicon-eye-open\"></i>"
+msgstr "<i class=\"glyphicon glyphicon-eye-open\"></i>"
+
+#: View/AcceptedReceptions/index.ctp:60 View/AlertTypes/index.ctp:34
+#: View/AlertTypes/view.ctp:82 View/AttachmentTypes/index.ctp:32
+#: View/AttachmentTypes/view.ctp:85 View/Attachments/index.ctp:48
+#: View/Dashboards/index.ctp:42 View/Groups/index.ctp:32
+#: View/Groups/view.ctp:78 View/Holidays/index.ctp:32 View/Matters/index.ctp:32
+#: View/Matters/view.ctp:87 View/MemoAlerts/index.ctp:44
+#: View/MemoTrackingTypes/index.ctp:32 View/MemoTrackingTypes/view.ctp:81
+#: View/MemoTrackings/index.ctp:46 View/MemoTypes/index.ctp:32
+#: View/MemoTypes/view.ctp:83 View/MimeTypes/index.ctp:35
+#: View/OrganizationUnits/index.ctp:36 View/OrganizationUnits/view.ctp:80;134
+#: View/Shares/index.ctp:34 View/Shares/view.ctp:80
+#: View/Subrogances/index.ctp:36 View/SupplierRatings/index.ctp:64
+#: View/Units/index.ctp:38 View/Units/view.ctp:91;141 View/Users/index.ctp:37
+msgid "<i class=\"glyphicon glyphicon-pencil\"></i>"
+msgstr "<i class=\"glyphicon glyphicon-pencil\"></i>"
+
+#: View/AcceptedReceptions/index.ctp:61 View/AlertTypes/index.ctp:35
+#: View/AlertTypes/view.ctp:83 View/AttachmentTypes/index.ctp:33
+#: View/AttachmentTypes/view.ctp:86 View/Attachments/index.ctp:49
+#: View/Dashboards/index.ctp:43 View/Groups/index.ctp:33
+#: View/Groups/view.ctp:79 View/Holidays/index.ctp:33 View/Matters/index.ctp:33
+#: View/Matters/view.ctp:88 View/MemoAlerts/index.ctp:45
+#: View/MemoTrackingTypes/index.ctp:33 View/MemoTrackingTypes/view.ctp:82
+#: View/MemoTrackings/index.ctp:47 View/MemoTypes/index.ctp:33
+#: View/MemoTypes/view.ctp:84 View/MimeTypes/index.ctp:36
+#: View/OrganizationUnits/index.ctp:37 View/OrganizationUnits/view.ctp:81;135
+#: View/Shares/index.ctp:35 View/Shares/view.ctp:81
+#: View/Subrogances/index.ctp:37 View/SupplierRatings/index.ctp:65
+#: View/Units/index.ctp:39 View/Units/view.ctp:92;142 View/Users/index.ctp:38
+msgid "<i class=\"glyphicon glyphicon-trash\"></i>"
+msgstr "<i class=\"glyphicon glyphicon-trash\"></i>"
+
+#: View/AcceptedReceptions/index.ctp:61 View/AlertTypes/index.ctp:35
+#: View/AlertTypes/view.ctp:83 View/AttachmentTypes/index.ctp:33
+#: View/AttachmentTypes/view.ctp:86 View/Attachments/index.ctp:49
+#: View/Dashboards/index.ctp:43 View/Groups/index.ctp:33
+#: View/Groups/view.ctp:79 View/Holidays/index.ctp:33 View/Matters/index.ctp:33
+#: View/Matters/view.ctp:88 View/MemoAlerts/index.ctp:45
+#: View/MemoTrackingTypes/index.ctp:33 View/MemoTrackingTypes/view.ctp:82
+#: View/MemoTrackings/index.ctp:47 View/MemoTypes/index.ctp:33
+#: View/MemoTypes/view.ctp:84 View/MimeTypes/index.ctp:36
+#: View/OrganizationUnits/index.ctp:37 View/OrganizationUnits/view.ctp:81;135
+#: View/Shares/index.ctp:35 View/Shares/view.ctp:81
+#: View/Subrogances/index.ctp:37 View/SupplierRatings/index.ctp:65
+#: View/Units/index.ctp:39 View/Units/view.ctp:92;142 View/Users/index.ctp:38
+msgid "Are you sure you want to delete # %s?"
+msgstr "Estas seguro de querer borrarlo # %s?"
+
+#: View/AcceptedReceptions/view.ctp:9 View/SupplierRatings/view.ctp:9
+msgid "<i class=\"glyphicon glyphicon-chevron-left\"></i> &nbsp; Back"
+msgstr "<i class=\"glyphicon glyphicon-chevron-left\"></i> &nbsp; Volver"
+
+#: View/AcceptedReceptions/pdf/pdf.ctp:77 View/SupplierRatings/pdf/pdf.ctp:154
+msgid ""
+"This document contains basic digital signature and you can verify its "
+"authenticity with the "
+msgstr ""
+"Este documento contiene firma digital básica y podrá verificar su "
+"autenticidad con el "
+
+#: View/AlertTypes/add.ctp:6
+msgid "Add Alert Type"
+msgstr ""
+
+#: View/AlertTypes/edit.ctp:6
+msgid "Edit Alert Type"
+msgstr ""
+
+#: View/AlertTypes/index.ctp:7
+msgid "Alert Types"
+msgstr ""
+
+#: View/AlertTypes/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Alert Type"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:7 View/MemoAlerts/view.ctp:21
+msgid "Alert Type"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:9 View/AttachmentTypes/view.ctp:9
+#: View/Attachments/view.ctp:9 View/Dashboards/view.ctp:9
+#: View/Elements/detail.ctp:188;206 View/Groups/view.ctp:10
+#: View/Holidays/view.ctp:9 View/Matters/view.ctp:9 View/MemoAlerts/view.ctp:9
+#: View/MemoTrackingTypes/view.ctp:9 View/MemoTrackings/view.ctp:9
+#: View/MemoTypes/view.ctp:9 View/Memos/view.ctp:190;208
+#: View/MimeTypes/view.ctp:9 View/OrganizationUnits/view.ctp:9
+#: View/Shares/view.ctp:9 View/Subrogances/view.ctp:9 View/Units/view.ctp:9
+#: View/Users/view.ctp:10
+msgid "<i class=\"glyphicon glyphicon-pencil\"></i> Edit"
+msgstr "<i class=\"glyphicon glyphicon-pencil\"></i> Editar"
+
+#: View/AlertTypes/view.ctp:16 View/AttachmentTypes/view.ctp:16;55
+#: View/Attachments/view.ctp:16 View/Dashboards/view.ctp:16
+#: View/Groups/view.ctp:17;56 View/Holidays/view.ctp:16
+#: View/Matters/view.ctp:16;55 View/MemoAlerts/view.ctp:16
+#: View/MemoTrackingTypes/view.ctp:16 View/MemoTrackings/view.ctp:16
+#: View/MemoTypes/view.ctp:16;55 View/OrganizationUnits/view.ctp:16;60;108
+#: View/Shares/view.ctp:16;60 View/Subrogances/view.ctp:16
+#: View/Units/view.ctp:16;65;119 View/Users/view.ctp:17
+msgid "Id"
+msgstr "Id"
+
+#: View/AlertTypes/view.ctp:21 View/AttachmentTypes/view.ctp:21;58
+#: View/Attachments/view.ctp:31 View/Dashboards/view.ctp:26
+#: View/Elements/detail.ctp:172 View/Groups/view.ctp:22
+#: View/Matters/view.ctp:21 View/MemoTrackingTypes/view.ctp:21
+#: View/MemoTypes/view.ctp:21 View/Memos/edit.ctp:147 View/Memos/view.ctp:174
+#: View/MimeTypes/view.ctp:17 View/OrganizationUnits/view.ctp:26;62
+#: View/Units/view.ctp:21;120
+msgid "Name"
+msgstr "Nombre"
+
+#: View/AlertTypes/view.ctp:26
+msgid "Period"
+msgstr "Periodicidad"
+
+#: View/AlertTypes/view.ctp:31;64 View/AttachmentTypes/view.ctp:26;63
+#: View/Attachments/view.ctp:56 View/Dashboards/view.ctp:41
+#: View/Groups/view.ctp:27;60 View/Holidays/index.ctp:18
+#: View/Holidays/view.ctp:31 View/Matters/view.ctp:26;64
+#: View/MemoAlerts/view.ctp:41 View/MemoTrackingTypes/view.ctp:26;61
+#: View/MemoTrackings/view.ctp:51 View/MemoTypes/view.ctp:26;62
+#: View/Memos/time_line.ctp:13 View/MimeTypes/view.ctp:38
+#: View/OrganizationUnits/view.ctp:31;63;114 View/Shares/index.ctp:18
+#: View/Shares/view.ctp:31;63 View/Subrogances/index.ctp:20
+#: View/Subrogances/view.ctp:36 View/Units/view.ctp:36;71;123
+#: View/Users/view.ctp:37
+msgid "Created"
+msgstr "Creado"
+
+#: View/AlertTypes/view.ctp:36;65 View/AttachmentTypes/view.ctp:31;64
+#: View/Attachments/view.ctp:61 View/Dashboards/view.ctp:46
+#: View/Groups/view.ctp:32;61 View/Holidays/index.ctp:19
+#: View/Holidays/view.ctp:36 View/Matters/view.ctp:31;65
+#: View/MemoAlerts/view.ctp:46 View/MemoTrackingTypes/view.ctp:31;62
+#: View/MemoTrackings/view.ctp:56 View/MemoTypes/view.ctp:31;63
+#: View/Memos/time_line.ctp:185 View/MimeTypes/view.ctp:45
+#: View/OrganizationUnits/view.ctp:36;64;115 View/Shares/index.ctp:19
+#: View/Shares/view.ctp:36;64 View/Subrogances/index.ctp:21
+#: View/Subrogances/view.ctp:41 View/Units/view.ctp:41;72;124
+#: View/Users/view.ctp:42
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/AlertTypes/view.ctp:50
+msgid "Related Memo Alerts"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:52
+msgid "New Memo Alert"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:60
+msgid "Alert Type Id"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:61 View/AttachmentTypes/view.ctp:56
+#: View/MemoTrackingTypes/view.ctp:55
+msgid "Memo Id"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:62 View/Units/view.ctp:67
+msgid "User Id"
+msgstr ""
+
+#: View/AlertTypes/view.ctp:63 View/MemoAlerts/view.ctp:36
+msgid "Viewed"
+msgstr "Visto"
+
+#: View/AttachmentTypes/add.ctp:6
+msgid "Add Attachment Type"
+msgstr ""
+
+#: View/AttachmentTypes/edit.ctp:6
+msgid "Edit Attachment Type"
+msgstr ""
+
+#: View/AttachmentTypes/index.ctp:7
+msgid "Attachment Types"
+msgstr ""
+
+#: View/AttachmentTypes/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Attachment Type"
+msgstr ""
+
+#: View/AttachmentTypes/view.ctp:7 View/Attachments/view.ctp:26
+msgid "Attachment Type"
+msgstr ""
+
+#: View/AttachmentTypes/view.ctp:45
+msgid "Related Attachments"
+msgstr ""
+
+#: View/AttachmentTypes/view.ctp:47
+msgid "New Attachment"
+msgstr ""
+
+#: View/AttachmentTypes/view.ctp:57
+msgid "Attachment Type Id"
+msgstr ""
+
+#: View/AttachmentTypes/view.ctp:59 View/Attachments/view.ctp:36
+#: View/Elements/detail.ctp:150;173;252;253 View/Holidays/index.ctp:17
+#: View/Holidays/view.ctp:26 View/Matters/view.ctp:62
+#: View/MemoTrackingTypes/view.ctp:60 View/MemoTrackings/view.ctp:46
+#: View/MemoTypes/view.ctp:60 View/Memos/add.ctp:122;146
+#: View/Memos/edit.ctp:106;148 View/Memos/index.ctp:87;196;279;357
+#: View/Memos/view.ctp:152;175;254;255 View/MimeTypes/view.ctp:24
+#: View/Subrogances/index.ctp:19 View/Subrogances/view.ctp:31
+#: View/Units/view.ctp:31;70;122
+msgid "Description"
+msgstr "Descripción"
+
+#: View/AttachmentTypes/view.ctp:60 View/Attachments/view.ctp:41
+msgid "Type"
+msgstr "Tipo"
+
+#: View/AttachmentTypes/view.ctp:61 View/Attachments/view.ctp:46
+msgid "Data"
+msgstr "Data"
+
+#: View/AttachmentTypes/view.ctp:62 View/Attachments/view.ctp:51
+msgid "Size"
+msgstr "Tamaño"
+
+#: View/Attachments/add.ctp:6
+msgid "Add Attachment"
+msgstr "Añadir un adjunto"
+
+#: View/Attachments/edit.ctp:6
+msgid "Edit Attachment"
+msgstr "Editar archivo adjunto"
+
+#: View/Attachments/index.ctp:7 View/Elements/detail.ctp:162
+#: View/Memos/add.ctp:134 View/Memos/edit.ctp:133 View/Memos/time_line.ctp:68
+#: View/Memos/view.ctp:164
+msgid "Attachments"
+msgstr "Archivos Adjuntos"
+
+#: View/Attachments/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Attachment"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo archivo adjunto"
+
+#: View/Attachments/view.ctp:7
+msgid "Attachment"
+msgstr "Adjunto archivo"
+
+#: View/Attachments/view.ctp:21 View/MemoAlerts/view.ctp:26
+#: View/MemoTrackings/view.ctp:21
+msgid "Memo"
+msgstr "Memorándum"
+
+#: View/Dashboards/add.ctp:1 View/Dashboards/edit.ctp:1
+#: View/Dashboards/view.ctp:1
+msgid "List dashboards"
+msgstr "Listar Menús"
+
+#: View/Dashboards/add.ctp:6
+msgid "Add Dashboard"
+msgstr "Agregar Menú"
+
+#: View/Dashboards/add.ctp:33 View/Dashboards/edit.ctp:36
+#: View/Groups/add.ctp:19 View/Groups/edit.ctp:22
+#: View/MemoTrackings/refuse.ctp:16 View/MemoTrackings/shunt.ctp:22
+#: View/Memos/add.ctp:213 View/Memos/edit.ctp:221 View/MimeTypes/add.ctp:24
+#: View/MimeTypes/edit.ctp:27 View/Subrogances/add.ctp:31
+#: View/Subrogances/edit.ctp:34 View/Users/add.ctp:55 View/Users/edit.ctp:28
+msgid "Submit"
+msgstr "Enviar"
+
+#: View/Dashboards/edit.ctp:6
+msgid "Edit Dashboard"
+msgstr "Ediatr Menú"
+
+#: View/Dashboards/index.ctp:7
+msgid "Dashboards"
+msgstr "Menús"
+
+#: View/Dashboards/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Dashboard"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo Menú"
+
+#: View/Dashboards/view.ctp:7
+msgid "Dashboard"
+msgstr "Menú"
+
+#: View/Dashboards/view.ctp:21 View/Groups/view.ctp:8 View/Users/view.ctp:32
+msgid "Group"
+msgstr "Grupo"
+
+#: View/Dashboards/view.ctp:31
+msgid "Position"
+msgstr "Posición"
+
+#: View/Dashboards/view.ctp:36
+msgid "Icon"
+msgstr "Icono"
+
+#: View/Elements/breadcrumbs.ctp:3
+msgid "Home"
+msgstr "Inicio"
+
+#: View/Elements/detail.ctp:9 View/Memos/view.ctp:12
+msgid "<i class=\"glyphicon glyphicon-resize-full\"></i> &nbsp; Online Memo"
+msgstr "<i class=\"glyphicon glyphicon-eye-open\"></i> &nbsp; Memo en Línea"
+
+#: View/Elements/detail.ctp:11 View/Memos/time_line.ctp:46
+#: View/Memos/view.ctp:14
+msgid "Export "
+msgstr "Exportar "
+
+#: View/Elements/detail.ctp:13 View/Memos/time_line.ctp:48
+#: View/Memos/view.ctp:16
+msgid "Export Memo (PDF)"
+msgstr "Exportar Memorándum (PDF)"
+
+#: View/Elements/detail.ctp:14 View/Memos/time_line.ctp:50
+#: View/Memos/view.ctp:17
+msgid "Export Attach (ZIP)"
+msgstr "Exportar Adjuntos (ZIP)"
+
+#: View/Elements/detail.ctp:14 View/Memos/time_line.ctp:50
+#: View/Memos/view.ctp:17
+msgid ""
+"It is in the process of exporting the memorandum (s) and their attachments. "
+"This process may delay. %s (PDF/ZIP)"
+msgstr ""
+"Está en proceso de exportar los adjuntos asciodados al memorándum. \n"
+"\n"
+"Este proceso puede tardar.\n"
+"\n"
+"A continuación se generará el archivo %s.zip"
+
+#: View/Elements/detail.ctp:17 View/Memos/search.ctp:47 View/Memos/view.ctp:20
+msgid "<i class=\"glyphicon glyphicon-time\"></i> &nbsp; Time Line"
+msgstr "<i class=\"glyphicon glyphicon-time\"></i> &nbsp; Línea Tiempo"
+
+#: View/Elements/detail.ctp:22;45;55;60 View/Memos/view.ctp:25;48;58;63
+msgid "Edit"
+msgstr "Editar"
+
+#: View/Elements/detail.ctp:24 View/Memos/view.ctp:27
+msgid " Send"
+msgstr " Enviar"
+
+#: View/Elements/detail.ctp:28 View/Memos/add.ctp:217 View/Memos/edit.ctp:225
+#: View/Memos/view.ctp:31 View/Subrogances/view.ctp:7
+msgid "Subrogance"
+msgstr "Subrogancia"
+
+#: View/Elements/detail.ctp:47;71 View/Memos/view.ctp:50;73
+msgid "<i class=\"fa fa-close\"></i> &nbsp; Refuse"
+msgstr "<i class=\"fa fa-close\"></i> &nbsp; Devolver"
+
+#: View/Elements/detail.ctp:62;73 View/Memos/view.ctp:65;75
+msgid "<i class=\"fa fa-share-alt\"></i> &nbsp; Shunt"
+msgstr "<i class=\"fa fa-share-alt\"></i> &nbsp; Derivar"
+
+#: View/Elements/detail.ctp:69 View/Memos/view.ctp:71
+msgid "<i class=\"fa fa-check\"></i> &nbsp; Approve"
+msgstr "<i class=\"fa fa-check\"></i> &nbsp; Responder"
+
+#: View/Elements/detail.ctp:96 View/Memos/index.ctp:618 View/Memos/view.ctp:98
+msgid "Memo sent with high importance"
+msgstr "Memorándum enviado con importancia alta"
+
+#: View/Elements/detail.ctp:103 View/Matters/view.ctp:61
+#: View/MemoTypes/view.ctp:59 View/Memos/add.ctp:112 View/Memos/edit.ctp:91
+#: View/Memos/search.ctp:37 View/Memos/time_line.ctp:35 View/Memos/view.ctp:105
+#: View/Memos/pdf/pdf.ctp:45
+msgid "Reference"
+msgstr "Referencia"
+
+#: View/Elements/detail.ctp:107 View/Memos/add.ctp:31 View/Memos/edit.ctp:32
+#: View/Memos/time_line.ctp:98 View/Memos/view.ctp:109
+msgid "Addressee"
+msgstr "Destinatario"
+
+#: View/Elements/detail.ctp:115 View/Memos/add.ctp:51 View/Memos/edit.ctp:43
+#: View/Memos/index.ctp:68 View/Memos/time_line.ctp:99 View/Memos/view.ctp:117
+msgid "Notify"
+msgstr "Notificación"
+
+#: View/Elements/detail.ctp:124 View/Matters/view.ctp:7
+#: View/Memos/traceability.ctp:14 View/Memos/view.ctp:126
+msgid "Matter"
+msgstr "Materia"
+
+#: View/Elements/detail.ctp:131 View/Memos/view.ctp:133
+msgid "Reason for return"
+msgstr "Razón de devolución"
+
+#: View/Elements/detail.ctp:139 View/Memos/view.ctp:141
+msgid "Reason for shunt"
+msgstr "Razón de la derivación"
+
+#: View/Elements/detail.ctp:186;204 View/Memos/view.ctp:188;206
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> Add"
+msgstr "<i class=\"glyphicon glyphicon-pencil\"></i> Crear"
+
+#: View/Elements/detail.ctp:190;208;224 View/Memos/add.ctp:189
+#: View/Memos/edit.ctp:174 View/Memos/view.ctp:192;210;226
+msgid "View"
+msgstr "Ver"
+
+#: View/Elements/detail.ctp:198 View/Memos/add.ctp:250
+#: View/Memos/time_line.ctp:154 View/Memos/view.ctp:200
+#: View/SupplierRatings/add.ctp:8 View/SupplierRatings/edit.ctp:7
+#: View/SupplierRatings/view.ctp:6 View/SupplierRatings/pdf/pdf.ctp:2
+msgid "Supplier Rating"
+msgstr "Calificación a Proveedores"
+
+#: View/Elements/detail.ctp:244 View/Matters/view.ctp:45
+#: View/MemoTypes/view.ctp:45 View/Memos/view.ctp:246
+msgid "Related Memos"
+msgstr "Memos Relacionados"
+
+#: View/Elements/detail.ctp:279 View/Memos/index.ctp:121;231;314;392
+#: View/Memos/view.ctp:281
+msgid "importance"
+msgstr "importante"
+
+#: View/Elements/detail.ctp:290 View/Memos/view.ctp:292
+msgid "<i class=\"glyphicon glyphicon-eye-open\"></i> View"
+msgstr "<i class=\"glyphicon glyphicon-eye-open\"></i> Ver"
+
+#: View/Elements/icons.ctp:57
+msgid "Please click on the desired icon"
+msgstr "Haga clic en el icono deseado"
+
+#: View/Elements/icons.ctp:1240 View/Memos/add.ctp:624 View/Memos/edit.ctp:264
+#: View/Memos/index.ctp:485 View/Memos/view.ctp:337
+msgid "Close"
+msgstr "Cerrar"
+
+#: View/Groups/add.ctp:1 View/Groups/edit.ctp:1 View/Groups/view.ctp:1
+msgid "Index groups"
+msgstr "Lista de grupos"
+
+#: View/Groups/add.ctp:7
+msgid "Add Group"
+msgstr "Añadir Grupo"
+
+#: View/Groups/edit.ctp:7
+msgid "Edit Group"
+msgstr "Editar Grupo"
+
+#: View/Groups/index.ctp:7
+msgid "Groups"
+msgstr "Grupos"
+
+#: View/Groups/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Group"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo Grupo"
+
+#: View/Groups/view.ctp:46 View/OrganizationUnits/view.ctp:98
+msgid "Related Users"
+msgstr "Usuarios Relacionados"
+
+#: View/Groups/view.ctp:48 View/OrganizationUnits/view.ctp:100
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+#: View/Groups/view.ctp:57 View/OrganizationUnits/view.ctp:112
+#: View/Shares/view.ctp:26;62 View/Users/view.ctp:22
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+#: View/Groups/view.ctp:58 View/OrganizationUnits/view.ctp:113
+#: View/Users/view.ctp:27
+msgid "Password"
+msgstr "Clave"
+
+#: View/Groups/view.ctp:59 View/OrganizationUnits/view.ctp:109
+msgid "Group Id"
+msgstr "Id Grupo"
+
+#: View/Holidays/add.ctp:6
+msgid "Add Holiday"
+msgstr "Añadir Feriado"
+
+#: View/Holidays/edit.ctp:6
+msgid "Edit Holiday"
+msgstr "Editar Feriado"
+
+#: View/Holidays/index.ctp:7
+msgid "Holidays"
+msgstr "Feriados"
+
+#: View/Holidays/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Holiday"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Crear Feriado"
+
+#: View/Holidays/index.ctp:16 View/Holidays/view.ctp:21
+msgid "Holiday Date"
+msgstr "Fecha Feriado"
+
+#: View/Holidays/view.ctp:7
+msgid "Holiday"
+msgstr "Feriado"
+
+#: View/Matters/add.ctp:5
+msgid "Add Matter"
+msgstr "Añadir Materia"
+
+#: View/Matters/edit.ctp:6
+msgid "Edit Matter"
+msgstr "Editar Materia"
+
+#: View/Matters/index.ctp:7 View/Memos/add.ctp:80 View/Memos/edit.ctp:59
+msgid "Matters"
+msgstr "Materias"
+
+#: View/Matters/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Matter"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Crear Materia"
+
+#: View/Matters/view.ctp:47 View/MemoTypes/view.ctp:47
+msgid "New Memo"
+msgstr "Crear Memo"
+
+#: View/Matters/view.ctp:56 View/MemoTypes/view.ctp:56
+#: View/OrganizationUnits/view.ctp:61 View/Shares/view.ctp:61
+#: View/Units/view.ctp:121
+msgid "Parent Id"
+msgstr ""
+
+#: View/Matters/view.ctp:57
+msgid "Matter Id"
+msgstr ""
+
+#: View/Matters/view.ctp:58 View/MemoTypes/view.ctp:57
+msgid "Memo Type Id"
+msgstr ""
+
+#: View/Matters/view.ctp:59 View/Memos/add.ctp:101 View/Memos/edit.ctp:79
+msgid "Memo Date"
+msgstr "Fecha Creación"
+
+#: View/Matters/view.ctp:60 View/MemoTypes/view.ctp:58
+msgid "Memo Number"
+msgstr "Número Memorándum"
+
+#: View/Matters/view.ctp:63 View/MemoTypes/view.ctp:61 View/Memos/add.ctp:205
+#: View/Memos/edit.ctp:204
+msgid "Initial Responsibility"
+msgstr "Iniciales de Responsabilidad"
+
+#: View/MemoAlerts/add.ctp:6
+msgid "Add Memo Alert"
+msgstr ""
+
+#: View/MemoAlerts/edit.ctp:6
+msgid "Edit Memo Alert"
+msgstr ""
+
+#: View/MemoAlerts/index.ctp:7
+msgid "Memo Alerts"
+msgstr ""
+
+#: View/MemoAlerts/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Memo Alert"
+msgstr ""
+
+#: View/MemoAlerts/view.ctp:7
+msgid "Memo Alert"
+msgstr ""
+
+#: View/MemoAlerts/view.ctp:31 View/Users/view.ctp:8
+msgid "User"
+msgstr "Usuario"
+
+#: View/MemoTrackingTypes/add.ctp:6
+msgid "Add Memo Tracking Type"
+msgstr ""
+
+#: View/MemoTrackingTypes/edit.ctp:6
+msgid "Edit Memo Tracking Type"
+msgstr ""
+
+#: View/MemoTrackingTypes/index.ctp:7
+msgid "Memo Tracking Types"
+msgstr ""
+
+#: View/MemoTrackingTypes/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Memo Tracking Type"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:7 View/MemoTrackings/view.ctp:26
+msgid "Memo Tracking Type"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:45
+msgid "Related Memo Trankings"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:47
+msgid "New Memo Tranking"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:56
+msgid "User From Id"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:57
+msgid "Memo Tracking Type Id"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:58
+msgid "User To Id"
+msgstr ""
+
+#: View/MemoTrackingTypes/view.ctp:59 View/MemoTrackings/view.ctp:41
+msgid "Approved"
+msgstr "Respondido"
+
+#: View/MemoTrackings/add.ctp:6
+msgid "Add Memo Tracking"
+msgstr ""
+
+#: View/MemoTrackings/edit.ctp:6
+msgid "Edit Memo Tracking"
+msgstr ""
+
+#: View/MemoTrackings/index.ctp:7
+msgid "Memo Trackings"
+msgstr ""
+
+#: View/MemoTrackings/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Memo Tracking"
+msgstr ""
+
+#: View/MemoTrackings/refuse.ctp:3
+msgid "Observation"
+msgstr "Observación"
+
+#: View/MemoTrackings/shunt.ctp:5
+msgid "Shunt"
+msgstr "Derivado"
+
+#: View/MemoTrackings/view.ctp:7
+msgid "Memo Tracking"
+msgstr "Seguimiento de Memorándum"
+
+#: View/MemoTrackings/view.ctp:31 View/Memos/add.ctp:19 View/Memos/edit.ctp:23
+#: View/Memos/traceability.ctp:15 View/Memos/pdf/pdf.ctp:18
+msgid "From"
+msgstr "De"
+
+#: View/MemoTrackings/view.ctp:36 View/Memos/traceability.ctp:16
+#: View/Memos/pdf/pdf.ctp:32 View/Shares/index.ctp:17
+#: View/Subrogances/index.ctp:16 View/Subrogances/view.ctp:21
+msgid "To"
+msgstr "A"
+
+#: View/MemoTypes/add.ctp:6
+msgid "Add Memo Type"
+msgstr "Añadir Tipo Memo"
+
+#: View/MemoTypes/edit.ctp:6
+msgid "Edit Memo Type"
+msgstr "Editar Tipo Memo"
+
+#: View/MemoTypes/index.ctp:7
+msgid "Memo Types"
+msgstr "Tipo Memo"
+
+#: View/MemoTypes/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Memo Type"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo Tipo de Memo"
+
+#: View/MemoTypes/view.ctp:7
+msgid "Memo Type"
+msgstr "Tipo Memo"
+
+#: View/Memos/add.ctp:10 View/Memos/edit.ctp:14
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:134
+#: View/Users/login.ctp:27
+msgid "Memorandum"
+msgstr "Memorándum"
+
+#: View/Memos/add.ctp:89 View/Memos/edit.ctp:67
+msgid "Importance"
+msgstr "Importancia"
+
+#: View/Memos/add.ctp:92 View/Memos/edit.ctp:69
+msgid "Important"
+msgstr "Importante"
+
+#: View/Memos/add.ctp:92 View/Memos/edit.ctp:69
+msgid "Normal"
+msgstr "Normal"
+
+#: View/Memos/add.ctp:135 View/Memos/edit.ctp:134
+msgid "Only PDF files are allowed"
+msgstr "Sólo se permiten archivos PDF"
+
+#: View/Memos/add.ctp:141 View/Memos/edit.ctp:138
+msgid "Add more files"
+msgstr "Añadir más archivos"
+
+#: View/Memos/add.ctp:145 View/Subrogances/index.ctp:18
+msgid "File Name"
+msgstr "Nombre del Archivo"
+
+#: View/Memos/add.ctp:157;162;167;172;177;191 View/Memos/edit.ctp:175
+msgid "Delete file"
+msgstr "Eliminar archivo"
+
+#: View/Memos/add.ctp:232 View/Memos/edit.ctp:242
+msgid "Save without sending"
+msgstr "Guardar sin enviar"
+
+#: View/Memos/add.ctp:260 View/SupplierRatings/add.ctp:13
+#: View/SupplierRatings/edit.ctp:20 View/SupplierRatings/view.ctp:16
+#: View/SupplierRatings/pdf/pdf.ctp:6
+msgid "Qualification Date"
+msgstr "Fecha de la Calificación"
+
+#: View/Memos/add.ctp:267 View/SupplierRatings/add.ctp:20
+#: View/SupplierRatings/edit.ctp:27 View/SupplierRatings/view.ctp:23
+#: View/SupplierRatings/pdf/pdf.ctp:8
+msgid "Office"
+msgstr "Unidad o Depto"
+
+#: View/Memos/add.ctp:274 View/SupplierRatings/add.ctp:27
+#: View/SupplierRatings/edit.ctp:34 View/SupplierRatings/view.ctp:30
+#: View/SupplierRatings/pdf/pdf.ctp:12
+msgid "Purchase Method"
+msgstr "Modalidad de Compra"
+
+#: View/Memos/add.ctp:281 View/SupplierRatings/add.ctp:34
+#: View/SupplierRatings/edit.ctp:41 View/SupplierRatings/view.ctp:37
+#: View/SupplierRatings/pdf/pdf.ctp:18
+msgid "Exempt Resolution that awards or approves the contract:"
+msgstr "Resolución Exenta que Adjudica o Aprueba el contrato:"
+
+#: View/Memos/add.ctp:285 View/SupplierRatings/add.ctp:38
+#: View/SupplierRatings/edit.ctp:45 View/SupplierRatings/view.ctp:41
+#: View/SupplierRatings/pdf/pdf.ctp:23
+msgid "Purchase Order Number"
+msgstr "Número Orden de Compra"
+
+#: View/Memos/add.ctp:292 View/SupplierRatings/add.ctp:45
+#: View/SupplierRatings/edit.ctp:52 View/SupplierRatings/view.ctp:48
+#: View/SupplierRatings/pdf/pdf.ctp:25
+msgid "Tender Number"
+msgstr "Número Licitación"
+
+#: View/Memos/add.ctp:301 View/SupplierRatings/add.ctp:54
+#: View/SupplierRatings/edit.ctp:61 View/SupplierRatings/view.ctp:57
+#: View/SupplierRatings/pdf/pdf.ctp:31
+msgid "Product"
+msgstr "Producto"
+
+#: View/Memos/add.ctp:308 View/SupplierRatings/add.ctp:61
+#: View/SupplierRatings/edit.ctp:68 View/SupplierRatings/view.ctp:64
+#: View/SupplierRatings/pdf/pdf.ctp:33
+msgid "Service"
+msgstr "Servicio"
+
+#: View/Memos/add.ctp:315 View/SupplierRatings/add.ctp:68
+#: View/SupplierRatings/edit.ctp:75 View/SupplierRatings/view.ctp:71
+#: View/SupplierRatings/pdf/pdf.ctp:35
+msgid "Amount"
+msgstr "Monto"
+
+#: View/Memos/add.ctp:322 View/SupplierRatings/add.ctp:75
+#: View/SupplierRatings/edit.ctp:82 View/SupplierRatings/view.ctp:78
+#: View/SupplierRatings/pdf/pdf.ctp:39
+msgid "Provider Data:"
+msgstr "Datos del Proveedor:"
+
+#: View/Memos/add.ctp:326 View/SupplierRatings/add.ctp:79
+#: View/SupplierRatings/edit.ctp:86 View/SupplierRatings/view.ctp:82
+#: View/SupplierRatings/pdf/pdf.ctp:42
+msgid "Business Name"
+msgstr "Razón Social"
+
+#: View/Memos/add.ctp:333 View/SupplierRatings/add.ctp:86
+#: View/SupplierRatings/edit.ctp:93 View/SupplierRatings/view.ctp:89
+#: View/SupplierRatings/pdf/pdf.ctp:44
+msgid "RUT"
+msgstr "RUT"
+
+#: View/Memos/add.ctp:340 View/SupplierRatings/add.ctp:93
+#: View/SupplierRatings/edit.ctp:100 View/SupplierRatings/view.ctp:96
+#: View/SupplierRatings/pdf/pdf.ctp:46
+msgid "Entry"
+msgstr "Rubro"
+
+#: View/Memos/add.ctp:352 View/SupplierRatings/add.ctp:105
+#: View/SupplierRatings/edit.ctp:112 View/SupplierRatings/view.ctp:108
+#: View/SupplierRatings/pdf/pdf.ctp:52
+msgid "Evaluation Criteria"
+msgstr "Criterios de Evaluación"
+
+#: View/Memos/add.ctp:358 View/SupplierRatings/add.ctp:111
+#: View/SupplierRatings/edit.ctp:118 View/SupplierRatings/view.ctp:114
+#: View/SupplierRatings/pdf/pdf.ctp:58
+msgid "Very good: Fully complies with the request"
+msgstr "Muy bueno: Cumple totalmente con lo solicitado"
+
+#: View/Memos/add.ctp:359 View/SupplierRatings/add.ctp:112
+#: View/SupplierRatings/edit.ctp:119 View/SupplierRatings/view.ctp:115
+#: View/SupplierRatings/pdf/pdf.ctp:59
+msgid "Good: Complies with the request"
+msgstr "Bueno:  Cumple con lo solicitado"
+
+#: View/Memos/add.ctp:363 View/SupplierRatings/add.ctp:116
+#: View/SupplierRatings/edit.ctp:123 View/SupplierRatings/view.ctp:119
+#: View/SupplierRatings/pdf/pdf.ctp:62
+msgid "Regular: Partially complies with the request"
+msgstr "Regular: Cumple parcialmente con lo solicitado"
+
+#: View/Memos/add.ctp:364 View/SupplierRatings/add.ctp:117
+#: View/SupplierRatings/edit.ctp:124 View/SupplierRatings/view.ctp:120
+#: View/SupplierRatings/pdf/pdf.ctp:63
+msgid "Bad: Does not comply with the request"
+msgstr "Malo: No cumple con lo solicitado"
+
+#: View/Memos/add.ctp:371 View/SupplierRatings/add.ctp:124
+#: View/SupplierRatings/edit.ctp:130 View/SupplierRatings/view.ctp:126
+#: View/SupplierRatings/pdf/pdf.ctp:69
+msgid ""
+"Note: if you evaluate with a bad or regular grade, you must base your score."
+msgstr ""
+"Nota: en caso de evaluar con nota mala o regular, deberá fundamentar su "
+"calificación."
+
+#: View/Memos/add.ctp:379 View/SupplierRatings/add.ctp:132
+#: View/SupplierRatings/edit.ctp:138 View/SupplierRatings/view.ctp:134
+#: View/SupplierRatings/pdf/pdf.ctp:72
+msgid "Evaluation Questionnaire"
+msgstr "Cuestionario de Evaluación"
+
+#: View/Memos/add.ctp:383 View/SupplierRatings/add.ctp:136
+#: View/SupplierRatings/edit.ctp:142 View/SupplierRatings/view.ctp:138
+#: View/SupplierRatings/pdf/pdf.ctp:76
+msgid ""
+"How would you rate the opportunity to deliver the products and / or "
+"services? Are deadlines met?"
+msgstr ""
+"¿Cómo calificaría la oportunidad de la entrega de los productos y/o "
+"servicios? ¿Se cumplen los plazos?"
+
+#: View/Memos/add.ctp:390;406;422;438;454
+#: View/SupplierRatings/add.ctp:143;159;175;191;207
+#: View/SupplierRatings/edit.ctp:149;165;181;197;213
+#: View/SupplierRatings/view.ctp:145;161;177;193;209
+#: View/SupplierRatings/pdf/pdf.ctp:83;97;111;125;139
+msgid "Foundation"
+msgstr "Fundamento"
+
+#: View/Memos/add.ctp:399 View/SupplierRatings/add.ctp:152
+#: View/SupplierRatings/edit.ctp:158 View/SupplierRatings/view.ctp:154
+#: View/SupplierRatings/pdf/pdf.ctp:90
+msgid ""
+"How would you rate the quality of the products and / or services delivered?"
+msgstr ""
+"¿Cómo calificaría la calidad de los productos y/o servicios entregados?"
+
+#: View/Memos/add.ctp:415 View/SupplierRatings/add.ctp:168
+#: View/SupplierRatings/edit.ctp:174 View/SupplierRatings/view.ctp:170
+#: View/SupplierRatings/pdf/pdf.ctp:104
+msgid ""
+"How would you rate compliance with the Technical Specifications ?. Example: "
+"compliance of Products and Services offered, quantity, terms; place of "
+"delivery, levels or standards required."
+msgstr ""
+"¿Cómo  calificaría  el  cumplimiento  de  las  Especificaciones  Técnicas?. "
+"Ejemplo:  conformidad  de  los Productos y Servicios ofertados, cantidad, "
+"plazos; lugar de entrega, niveles o estándares requeridos."
+
+#: View/Memos/add.ctp:431 View/SupplierRatings/add.ctp:184
+#: View/SupplierRatings/edit.ctp:190 View/SupplierRatings/view.ctp:186
+#: View/SupplierRatings/pdf/pdf.ctp:118
+msgid "How do you evaluate the overall performance of the provider?"
+msgstr "¿Cómo evalúa el desempeño en general del proveedor?"
+
+#: View/Memos/add.ctp:447 View/SupplierRatings/add.ctp:200
+#: View/SupplierRatings/edit.ctp:206 View/SupplierRatings/view.ctp:202
+#: View/SupplierRatings/pdf/pdf.ctp:132
+msgid ""
+"Would you recommend to third parties the purchase of these products and / or "
+"services from this provider?"
+msgstr ""
+"¿Recomendaría a terceros la compra de estos productos y/o servicios de este "
+"proveedor?"
+
+#: View/Memos/add.ctp:648 View/Memos/edit.ctp:288
+msgid "Caution"
+msgstr "Precaución"
+
+#: View/Memos/add.ctp:649 View/Memos/edit.ctp:289
+msgid "This system only allows PDF files, please try again"
+msgstr "Este sistema solo permite archivos PDF, por favor intente nuevamente"
+
+#: View/Memos/add.ctp:676;679;687;689;692;695;776
+#: View/Memos/edit.ctp:307;310;318;321;324;327;410
+msgid " This field is required"
+msgstr " Este campo es requerido"
+
+#: View/Memos/index.ctp:12 View/Users/login.ctp:35
+msgid "username"
+msgstr "nombre de usuario"
+
+#: View/Memos/index.ctp:16
+msgid "Change"
+msgstr "Cambiar Usuario"
+
+#: View/Memos/index.ctp:34
+msgid "<i class=\"glyphicon glyphicon-refresh\"></i> Refresh"
+msgstr "<i class=\"glyphicon glyphicon-refresh\"></i> Actualizar"
+
+#: View/Memos/index.ctp:36
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Memo"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Crear Memo"
+
+#: View/Memos/index.ctp:43 View/Units/view.ctp:68
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#: View/Memos/index.ctp:46 View/Units/view.ctp:69
+msgid "End Date"
+msgstr "Fecha Final"
+
+#: View/Memos/index.ctp:48
+msgid "Filter per year "
+msgstr "Filtro "
+
+#: View/Memos/index.ctp:58
+msgid "Received"
+msgstr "Recibidos"
+
+#: View/Memos/index.ctp:63
+msgid "Sent"
+msgstr "Enviados"
+
+#: View/Memos/index.ctp:73
+msgid "Drafts"
+msgstr "Borradores"
+
+#: View/Memos/index.ctp:118;227;310;388
+msgid "give back"
+msgstr "devuelto"
+
+#: View/Memos/index.ctp:124;234;396
+msgid "share"
+msgstr "compartido"
+
+#: View/Memos/index.ctp:142
+msgid "shunt"
+msgstr "derivado"
+
+#: View/Memos/index.ctp:440
+msgid "Please select a memo"
+msgstr "Por favor, seleccione un memorándum"
+
+#: View/Memos/index.ctp:444
+msgid "loading content"
+msgstr "cargando contenido"
+
+#: View/Memos/index.ctp:615
+msgid "The memo has been shunt"
+msgstr "El memorándum ha sido derivado"
+
+#: View/Memos/index.ctp:621
+msgid "It has been shared"
+msgstr "Ha sido compartido"
+
+#: View/Memos/index.ctp:624
+msgid "The memo has not been read"
+msgstr "El memorándum no ha sido léido"
+
+#: View/Memos/index.ctp:627
+msgid "The memo has been read"
+msgstr "El memorándum ha sido léido"
+
+#: View/Memos/search.ctp:14
+msgid "Search"
+msgstr "Buscar"
+
+#: View/Memos/search.ctp:29
+msgid "Searchs"
+msgstr "Buscador"
+
+#: View/Memos/time_line.ctp:33 View/Memos/traceability.ctp:11
+msgid "Number Memo"
+msgstr "Número"
+
+#: View/Memos/time_line.ctp:37
+msgid "Description: "
+msgstr "Descripción: "
+
+#: View/Memos/time_line.ctp:44
+msgid "<i class=\"glyphicon glyphicon-eye-open\"></i> &nbsp; See detail"
+msgstr "<i class=\"glyphicon glyphicon-eye-open\"></i> &nbsp; Detalle"
+
+#: View/Memos/time_line.ctp:92 View/Users/index.ctp:8
+msgid "Users"
+msgstr "Usuarios"
+
+#: View/Memos/time_line.ctp:97
+msgid "Send By"
+msgstr "Enviado por"
+
+#: View/Memos/time_line.ctp:109
+msgid "Read"
+msgstr "Leído"
+
+#: View/Memos/time_line.ctp:109
+msgid "Unread"
+msgstr "No leído"
+
+#: View/Memos/time_line.ctp:139
+msgid "Forms"
+msgstr "Formularios"
+
+#: View/Memos/time_line.ctp:149;154;158;189
+#: View/Memos/traceability.ctp:38;39;42
+#: View/SupplierRatings/view.ctp:32;140;156;172;188
+#: View/SupplierRatings/pdf/pdf.ctp:13;78;92;106;120
+msgid "No Information"
+msgstr "Sin Información"
+
+#: View/Memos/time_line.ctp:177
+msgid "Shunts"
+msgstr "Derivados"
+
+#: View/Memos/time_line.ctp:185
+msgid "No Modified"
+msgstr "Sin Modificaciones"
+
+#: View/Memos/traceability.ctp:12
+msgid "Broadcast Date"
+msgstr "Fecha de Emisión"
+
+#: View/Memos/traceability.ctp:13
+msgid "Reception Date"
+msgstr "Fecha de Recepción"
+
+#: View/Memos/traceability.ctp:17
+msgid "Response Time"
+msgstr "Tiempo de Respuesta"
+
+#: View/Memos/traceability.ctp:18
+msgid "Status"
+msgstr "Estado"
+
+#: View/Memos/traceability.ctp:43
+msgid "finalized"
+msgstr "finalizado"
+
+#: View/Memos/traceability.ctp:43
+msgid "in process"
+msgstr "en proceso"
+
+#: View/Memos/view.ctp:1
+msgid "Index memos"
+msgstr "Listar memos"
+
+#: View/Memos/pdf/pdf.ctp:12
+msgid "INTERNAL MEMO"
+msgstr "MEMO INTERNO"
+
+#: View/Memos/pdf/pdf.ctp:86
+msgid "Distribution"
+msgstr "Distribución"
+
+#: View/Memos/pdf/pdf.ctp:105
+msgid "The memorandum still does not have a response from the head"
+msgstr "El memorándum aún no tiene una respuesta de parte de la jefatura"
+
+#: View/MimeTypes/add.ctp:1 View/MimeTypes/edit.ctp:1 View/MimeTypes/view.ctp:1
+msgid "Index mime types"
+msgstr "Lista de tipos de archivos"
+
+#: View/MimeTypes/add.ctp:6
+msgid "Add Mime Type"
+msgstr "Añadir Tipo Archivo"
+
+#: View/MimeTypes/edit.ctp:6
+msgid "Edit Mime Type"
+msgstr "Editar Tipo Archivo"
+
+#: View/MimeTypes/index.ctp:8
+msgid "Mime Types"
+msgstr "Tipos Archivo"
+
+#: View/MimeTypes/index.ctp:10
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Mime Type"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo Tipo Archivo"
+
+#: View/MimeTypes/view.ctp:7
+msgid "Mime Type"
+msgstr "Tipo Archivo"
+
+#: View/MimeTypes/view.ctp:31
+msgid "Active"
+msgstr "Activo"
+
+#: View/OrganizationUnits/add.ctp:6
+msgid "Add Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/edit.ctp:6
+msgid "Edit Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/index.ctp:7
+msgid "Organization Units"
+msgstr ""
+
+#: View/OrganizationUnits/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:7
+msgid "Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:21
+msgid "Parent Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:50
+msgid "Related Organization Units"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:52
+msgid "New Child Organization Unit"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:110
+msgid "Organization Unit Id"
+msgstr ""
+
+#: View/OrganizationUnits/view.ctp:111
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#: View/Shares/add.ctp:9 View/Shares/edit.ctp:9
+msgid "Add Share"
+msgstr "Compartir"
+
+#: View/Shares/add.ctp:18
+msgid "Select the user who wishes to share his memorandum"
+msgstr "Selecciona el usuario que desea compartir sus memorándums"
+
+#: View/Shares/index.ctp:7
+msgid "Shares"
+msgstr "Compartir"
+
+#: View/Shares/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Share"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Compartir"
+
+#: View/Shares/index.ctp:16
+msgid "Share your memos"
+msgstr "Comparte tus memorándums"
+
+#: View/Shares/view.ctp:7
+msgid "Share"
+msgstr "Compartir"
+
+#: View/Shares/view.ctp:21
+msgid "Parent Share"
+msgstr ""
+
+#: View/Shares/view.ctp:50
+msgid "Related Shares"
+msgstr "Compartidos Relacionados"
+
+#: View/Shares/view.ctp:52
+msgid "New Child Share"
+msgstr ""
+
+#: View/Subrogances/add.ctp:9
+msgid "Add Subrogance"
+msgstr "Agregar Subrogancia"
+
+#: View/Subrogances/add.ctp:25 View/Subrogances/edit.ctp:28
+msgid ""
+" (*) Remember to store the file in the \"mark\" folder and use the name "
+"described in the text and include the extension \".png\" (Ex: "
+"user_department.png)"
+msgstr ""
+" (*) Recuerde guardar el archivo en la carpeta \"mark\" y usar el nombre "
+"descrito en el texto e incluir la extensión \".png\" (Ej .: "
+"usuario_departmento.png)"
+
+#: View/Subrogances/edit.ctp:9
+msgid "Edit Subrogance"
+msgstr "Editar Subrogancias"
+
+#: View/Subrogances/index.ctp:7
+msgid "Subrogances"
+msgstr "Subrogancias"
+
+#: View/Subrogances/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Subrogance"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nueva Subrogancia"
+
+#: View/Subrogances/index.ctp:17 View/Subrogances/view.ctp:26
+msgid "Foot Signature"
+msgstr "Pie de Firma"
+
+#: View/SupplierRatings/index.ctp:7
+msgid "Supplier Ratings"
+msgstr "Calificación a Proveedores"
+
+#: View/SupplierRatings/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Supplier Rating"
+msgstr ""
+"<i class=\"glyphicon glyphicon-plus\"></i> Nueva Calificación a Proveedores"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:46
+msgid "the memo "
+msgstr "el memo "
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:46
+msgid " has been shunted"
+msgstr " ha sido derivado"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:86
+msgid "Sign out"
+msgstr "Cerrar Sessión"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:109
+msgid "Searcher"
+msgstr "Buscador de Memos"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:134
+#: View/Users/login.ctp:27
+msgid "System"
+msgstr "Sistema"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:150
+msgid "Loading state"
+msgstr "Estado de carga"
+
+#: View/Themed/CakeAdminLTE/Elements/menu/top_left_sidebar.ctp:153
+msgid "Please wait, the memo is being generated."
+msgstr "Por favor espere, el memorándum se está creando."
+
+#: View/Units/add.ctp:6
+msgid "Add Unit"
+msgstr "Agregar Unidad"
+
+#: View/Units/edit.ctp:6
+msgid "Edit Unit"
+msgstr "Editar Unidad"
+
+#: View/Units/index.ctp:7
+msgid "Units"
+msgstr "Unidades"
+
+#: View/Units/index.ctp:9
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New Unit"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Crear Unidad"
+
+#: View/Units/view.ctp:7
+msgid "Unit"
+msgstr "Unidad"
+
+#: View/Units/view.ctp:26
+msgid "Parent Unit"
+msgstr ""
+
+#: View/Units/view.ctp:55
+msgid "Related Subrogances"
+msgstr "Subrogancias Relacionadas"
+
+#: View/Units/view.ctp:57
+msgid "New Subrogance"
+msgstr "Nueva Subrogancia"
+
+#: View/Units/view.ctp:66
+msgid "Unit Id"
+msgstr ""
+
+#: View/Units/view.ctp:109
+msgid "Related Units"
+msgstr "Unidades Relacionadas"
+
+#: View/Units/view.ctp:111
+msgid "New Child Unit"
+msgstr ""
+
+#: View/Users/add.ctp:1 View/Users/edit.ctp:1 View/Users/view.ctp:1
+msgid "Index users"
+msgstr "Índice de usuarios"
+
+#: View/Users/add.ctp:11
+msgid "Find User"
+msgstr "Buscar Usuario"
+
+#: View/Users/add.ctp:18
+msgid "Info"
+msgstr "Información"
+
+#: View/Users/add.ctp:19
+msgid "write the user's name and then select it"
+msgstr "escriba el nombre del usuario y luego selecciónalo"
+
+#: View/Users/add.ctp:34
+msgid "Add User"
+msgstr "Agregar Usuario"
+
+#: View/Users/add.ctp:52 View/Users/edit.ctp:25 View/Users/index.ctp:19
+msgid "Do you want to receive alerts?"
+msgstr "¿Quieres recibir alertas?"
+
+#: View/Users/edit.ctp:7
+msgid "Edit User"
+msgstr "Editar Usuario"
+
+#: View/Users/index.ctp:10
+msgid "<i class=\"glyphicon glyphicon-plus\"></i> New User"
+msgstr "<i class=\"glyphicon glyphicon-plus\"></i> Nuevo Usuario"
+
+#: View/Users/login.ctp:39
+msgid "use the same password on your computer"
+msgstr "use la misma clave de su computadora"
+
+#: View/Users/login.ctp:50
+msgid "I'm not a robot"
+msgstr "No soy un robot"
+
+#: View/Users/login.ctp:58
+msgid "Sign In"
+msgstr "Iniciar"
+
+#: Model/AcceptedReception.php:validation for field memo_tracking_id
+#: Model/Attachment.php:validation memo_id;validation attachment_type_id
+#: Model/MemoAlert.php:validation alert_type_id;validation memo_id
+#: Model/MemoTracking.php:validation memo_tracking_type_id
+#: Model/OrganizationUnit.php:validation parent_id
+#: Model/SupplierRating.php:validation
+msgid "uuid"
+msgstr ""
+
+#: Model/AlertType.php:validation for field name
+#: Model/Attachment.php:validation Model/AttachmentType.php:validation
+#: Model/Dashboard.php:validation name;validation link;validation color
+#: Model/Group.php:validation Model/Matter.php:validation
+#: Model/MemoTracking.php:validation to Model/MemoTrackingType.php:validation
+#: Model/MemoType.php:validation Model/MimeType.php:validation
+#: Model/OrganizationUnit.php:validation Model/Share.php:validation username
+#: Model/Subrogance.php:validation to;validation foot_signature;validation
+#: file_name Model/Unit.php:validation Model/units.php:validation
+#: Model/User.php:validation group_unit_name;validation username;validation
+#: password
+msgid "notBlank"
+msgstr "ingrese algún valor"
+
+#: Model/AlertType.php:validation for field period
+#: Model/Dashboard.php:validation position Model/MimeType.php:validation active
+msgid "numeric"
+msgstr "ingrese solo valores numéricos"
+
+#: Model/Holiday.php:validation for field holiday_date
+msgid "date"
+msgstr "ingrese una fecha"
+
+#~ msgid "N°"
+#~ msgstr "N°"
+
+#~ msgid "<i class=\"glyphicon glyphicon-resize-full\"></i> &nbsp; Online Form"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-resize-full\"></i> &nbsp; Formulario en "
+#~ "Línea"
+
+#, fuzzy
+#~| msgid "Date Memo"
+#~ msgid "Date Range"
+#~ msgstr "Fecha Creación"
+
+#~ msgid "Sign in to start your session"
+#~ msgstr "Loguéate para comenzar tu sesión"
+
+#~ msgid "<i class=\"glyphicon glyphicon-eye-open\"></i> &nbsp; View Memo"
+#~ msgstr "<i class=\"glyphicon glyphicon-eye-open\"></i> &nbsp; Detalle"
+
+#~ msgid "<i class=\"fa fa-clock-o\"></i> &nbsp; Time Line"
+#~ msgstr "<i class=\"fa fa-clock-o\"></i> &nbsp; Línea Tiempo"
+
+#~ msgid "Memos"
+#~ msgstr "Memorándums"
+
+#, fuzzy
+#~| msgid "Description"
+#~ msgid "Descriprion"
+#~ msgstr "Descripción"
+
+#~ msgid "Supplier Name"
+#~ msgstr "Nombre Proveedor"
+
+#~ msgid "Supplier Rut"
+#~ msgstr "RUT Proveedor"
+
+#~ msgid "Purchase Order  Received"
+#~ msgstr "Orden de Compra Recepcionada Totalmente"
+
+#~ msgid "Purchase Order  Received P"
+#~ msgstr "Orden de Compra Recepcionada Parcialmente"
+
+#~ msgid "Office Guide Number"
+#~ msgstr "Número Guida de Despacho"
+
+#~ msgid "Office Guide Date"
+#~ msgstr "Fecha Guía de Despacho"
+
+#~ msgid "Invoice Number"
+#~ msgstr "Número Factura"
+
+#~ msgid "Invoice Date"
+#~ msgstr "Fecha Factura"
+
+#~ msgid "Purchase Order Date"
+#~ msgstr "Fecha Orden de Compra"
+
+#~ msgid "<i class=\"glyphicon glyphicon-pencil\"></i> &nbsp; Edit"
+#~ msgstr "<i class=\"glyphicon glyphicon-pencil\"></i> &nbsp; Editar"
+
+#~ msgid "Rut"
+#~ msgstr "RUT"
+
+#~ msgid "Question 1"
+#~ msgstr "Pregunta 1"
+
+#~ msgid "Foundation Question 1"
+#~ msgstr "Fundamento Pregunta 1"
+
+#~ msgid "Question 2"
+#~ msgstr "Pregunta 2"
+
+#~ msgid "Foundation Question 2"
+#~ msgstr "Fundamento Pregunta 2"
+
+#~ msgid "Question 3"
+#~ msgstr "Pregunta 3"
+
+#~ msgid "Foundation Question 3"
+#~ msgstr "Fundamento Pregunta 3"
+
+#~ msgid "Rejected"
+#~ msgstr "Devuelto"
+
+#~ msgid "External Memo Number"
+#~ msgstr "Número Externo"
+
+#~ msgid "Not Readed"
+#~ msgstr "No Leído"
+
+#~ msgid " Reader"
+#~ msgstr " Leído"
+
+#~ msgid " Not Reader"
+#~ msgstr " No Leído"
+
+#~ msgid "External Number Memo"
+#~ msgstr "Número Externo"
+
+#~ msgid "My Memos"
+#~ msgstr "Mis Memos"
+
+#~ msgid "Reference: "
+#~ msgstr "Referencia: "
+
+#~ msgid "Welcome."
+#~ msgstr "Bienvenido."
+
+#~ msgid "To add more files, please press the button"
+#~ msgstr "Para agregar más archivos, presione el botón"
+
+#~ msgid "and to delete a file, please press the button"
+#~ msgstr "y para eliminar un archivo, presione el botón"
+
+#~ msgid "to preview the file, please press the button"
+#~ msgstr "para obtener una vista previa del archivo, presione el botón"
+
+#~ msgid "<i class=\"glyphicon glyphicon-download-alt\"></i> &nbsp; Export PDF"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-download-alt\"></i> &nbsp; Exportar PDF"
+
+#~ msgid "To preview the file, please press the button"
+#~ msgstr "Para obtener una vista previa del archivo, presione el botón"
+
+#~ msgid "Attachments: "
+#~ msgstr "Adjuntos:"

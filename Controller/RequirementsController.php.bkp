@@ -1,0 +1,748 @@
+<?php
+App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
+/**
+ * Requirements Controller
+ *
+ * @property Requirement $Requirement
+ * @property PaginatorComponent $Paginator
+ */
+class RequirementsController extends AppController
+{
+
+	/**
+	 * Components
+	 *
+	 * @var array
+	 */
+	var $allMemoId = NULL;
+
+	public $components = array('Paginator', 'Session', 'Flash', 'RequestHandler');
+
+	//public $components = array('Paginator');
+
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+
+	/**
+	 * view method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+	public function view($id = null)
+	{
+		if (!$this->Requirement->exists($id)) {
+			throw new NotFoundException(__('Invalid requirement'));
+		}
+		$options = array('conditions' => array('Requirement.' . $this->Requirement->primaryKey => $id));
+		$this->set('requirement', $this->Requirement->find('first', $options));
+	}
+
+	/**
+	 * add method
+	 *
+	 * @return void
+	 */
+	public function add()
+	{
+		if ($this->request->is('post')) {
+			$this->Requirement->create();
+			if ($this->Requirement->save($this->request->data)) {
+				$this->Session->setFlash(__('The requirement has been saved'), 'flash/success');
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The requirement could not be saved. Please, try again.'), 'flash/error');
+			}
+		}
+		$requirementProcesses = $this->Requirement->RequirementProcess->find('list');
+		$this->set(compact('requirementProcesses'));
+	}
+
+	/**
+	 * edit method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+	public function edit($id = null)
+	{
+		$this->Requirement->id = $id;
+		if (!$this->Requirement->exists($id)) {
+			throw new NotFoundException(__('Invalid requirement'));
+		}
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Requirement->save($this->request->data)) {
+				$this->Session->setFlash(__('The requirement has been saved'), 'flash/success');
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The requirement could not be saved. Please, try again.'), 'flash/error');
+			}
+		} else {
+			$options = array('conditions' => array('Requirement.' . $this->Requirement->primaryKey => $id));
+			$this->request->data = $this->Requirement->find('first', $options);
+		}
+		$requirementProcesses = $this->Requirement->RequirementProcess->find('list');
+		$this->set(compact('requirementProcesses'));
+	}
+
+	/**
+	 * delete method
+	 *
+	 * @throws NotFoundException
+	 * @throws MethodNotAllowedException
+	 * @param string $id
+	 * @return void
+	 */
+	public function delete($id = null)
+	{
+		if (!$this->request->is('post')) {
+			throw new MethodNotAllowedException();
+		}
+		$this->Requirement->id = $id;
+		if (!$this->Requirement->exists()) {
+			throw new NotFoundException(__('Invalid requirement'));
+		}
+		if ($this->Requirement->delete()) {
+			$this->Session->setFlash(__('Requirement deleted'), 'flash/success');
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash(__('Requirement was not deleted'), 'flash/error');
+		$this->redirect(array('action' => 'index'));
+	}
+
+
+
+	// ----------------------------
+	// 			INDEX
+	// ----------------------------
+	public function index($id = null)
+	{
+		$this->theme = 'Login2';
+
+		$this->set('idRequirement', $this->Requirement->getInsertID());
+		$me = $this->Auth->user('username');
+
+		debug($this->request->data);
+
+		if ($this->request->is('post') /* or isset($this->request->data['Data']['id'])*/) {
+
+			$requirement_id = $this->request->data['Requirement']['requirement_id'];
+			#$procces		= $this->request->data['Requirement']['procces'];
+			#$processTask 	= $firstTask['id'];
+			$proccesId		= $this->request->data['Requirement']['RequirementProcess_id'];
+			$proccesName	= $this->request->data['Requirement']['RequirementProcess_name'];
+			$description	= $this->request->data['Requirement']['description'];
+			$creator		= $me;
+			#$milestone_id	= $this->request->data['Requirement']['milestone_id'];
+			#$status		= $this->request->data['Requirement']['status'];
+
+
+			$conditions = array(
+				'conditions' => array(
+					'RequirementProcess.id' => $proccesId
+				)
+			);
+			$this->loadModel('RequirementProcessTask');
+			$percentageProcess = $this->RequirementProcessTask->find('all', $conditions);
+			$percentageTotal = count($percentageProcess);
+
+			$this->loadModel('RequirementTracking');
+			$Requirement_tracking = $this->RequirementTracking->find('all', array(
+				'conditions' => array(
+					'RequirementTracking.requirement_id' => $requirement_id,
+					'RequirementTracking.requirement_tracking_type_id' => '65c52553-eef0-4651-9175-3df8c26b1ae0',
+				)
+			));
+
+			$percetageCompletes = count($Requirement_tracking);
+			if ($percetageCompletes == 0) {
+				$percetageCompletes = 1;
+			}
+			$percentageOpe = $percetageCompletes * 100 / $percentageTotal;
+			$percentage = round($percentageOpe);
+
+			$idRequirement = ($id) ? $id : $this->Requirement->getInsertID();
+
+			echo $percentage;
+			echo 'paso 1 ';
+
+			# VALIDAMOS SI ES UN HITO LO QUE SE INTENTA GUARDAR
+			if ($requirement_id == '') {
+				echo $percentage;
+				echo 'paso 2 ';
+
+				# OBTIENE EL ULTIMO REGISTROGUARDADO Y ASIGNA UNO NUEVO PARA NUEVO REQUERIMIENTO
+				$numRequirement 	=  $this->Requirement->find('first', array('order' => array('requirement_number' => 'DESC')));
+				$maxNumRequirement 	= ++$numRequirement['Requirement']['requirement_number'];
+
+				#CREA PROCESO NUEVO
+				$this->Requirement->create();
+				$this->request->data['Requirement']['creator'] 					= $me;
+				$this->request->data['Requirement']['requirement_process_id']	= $proccesId;
+				$this->request->data['Requirement']['requirement_status_id']	= 1;
+
+				$this->request->data['Requirement']['requirement_number']		= $maxNumRequirement;
+				$this->request->data['Requirement']['year']						= date('Y');
+
+				$this->request->data['Requirement']['percentage'] 				= 1; #$percentage;
+				$this->request->data['Requirement']['area'] 					= 'area1';
+				$this->request->data['Requirement']['task'] 					= 'task1';
+				#$this->request->data['Requirement']['collaborator'] 			= '';
+				$this->Requirement->save($this->request->data['Requirement']);
+
+				$this->Session->setFlash(__('Registro guardado con Exito.'), 'flash/success');
+				$this->redirect(array('action' => 'index/' . $this->Requirement->getLastInsertId()));
+			} else {
+				echo $percentage;
+				#echo 'paso 3 ';exit;
+
+				// PREGUNTAMOS POR LAS TAREAS DEL PROCESO
+				$this->loadModel('RequirementProcess');
+				$conditionsProcess = array('RequirementProcess.id' => $proccesId);
+				$process = $this->RequirementProcess->find('first', array('conditions' => $conditionsProcess));
+
+				// PREGUNTAMOS SI EXISTEN TAREAS EN EL TRACKING
+				$conditionsTracking = array('RequirementTracking.requirement_id' => $idRequirement);
+				$this->loadModel('RequirementTracking');
+				$tracking = $this->RequirementTracking->find('first', array('conditions' => $conditionsTracking));
+
+				$numTracking	=	$this->Requirement->RequirementTracking->find('first', array('order' => array('tracking_number' => 'DESC')));
+				$maxNumTracking	=	++$numTracking['RequirementTracking']['tracking_number'];
+
+				// ACTUALIZACIÓN DE REQUERIMIENTO
+				$this->Requirement->id = $requirement_id;
+				$this->request->data['Requirement']['percentage']	= $percentage;
+				$this->request->data['Requirement']['area'] 		= 'area3';
+				$this->request->data['Requirement']['task'] 		= 'task3';
+				$this->Requirement->save($this->request->data['Requirement']);
+				#exit;
+
+
+
+				if (!$tracking) {
+					// GUARDAMOS INFORMACION DEL REQUERIMIENTO
+					if (!empty($this->request->data['Requirement']['requirement_id'])) :
+
+						$this->Requirement->RequirementTracking->create();
+						$data['Requirement']['requirement_id'] 					= $requirement_id;
+						$data['Requirement']['requirement_tracking_type_id'] 	= '65c52553-eef0-4651-9175-3df8c26b1ae0';	// INFORMACIÓN DEL TRACKING
+
+						$data['Requirement']['requirement_process_tasks_id']	= $process['RequirementProcessTask'][0]['id'];
+						$data['Requirement']['requirement_process_id']			= $process['RequirementProcess']['id'];
+
+						$data['Requirement']['order_traking']					= 1;
+						$data['Requirement']['requirement_attachment_id']		= null;
+						$data['Requirement']['tracking_number']					= $maxNumTracking;
+						$data['Requirement']['to']								= 'to';
+						$data['Requirement']['description']						= $description;
+						$data['Requirement']['creator']							= $me;
+
+						debug($data['Requirement']['percentage']);
+						$this->Requirement->RequirementTracking->save($data['Requirement']);
+					#exit;
+
+					endif;
+				} else {
+					$conditions = array(
+						'RequirementTracking.requirement_id' => $idRequirement,
+						'RequirementTracking.requirement_tracking_type_id' => '65c52553-eef0-4651-9175-3df8c26b1ae0'
+					);
+					$trackingTask	= $this->RequirementTracking->find('all', array(
+						'recursive' 	=> -1,
+						'conditions' 	=> $conditions
+					));
+					$tareaCount = count($trackingTask);
+
+					// GUARDAMOS INFORMACION DEL REQUERIMIENTO
+					if (!empty($this->request->data['Requirement']['requirement_id'])) :
+						$this->Requirement->RequirementTracking->create();
+						$data['Requirement']['requirement_id'] 					= $requirement_id;
+						$data['Requirement']['requirement_tracking_type_id'] 	= '65c52553-eef0-4651-9175-3df8c26b1ae0';	// INFORMACIÓN DEL TRACKING
+
+						$data['Requirement']['requirement_process_tasks_id']	= $process['RequirementProcessTask'][$tareaCount]['id'];
+						$data['Requirement']['requirement_process_id']			= $process['RequirementProcess']['id'];
+
+						$data['Requirement']['percentage']						= $percentage;
+						$data['Requirement']['area'] 							= 'area';
+						$data['Requirement']['task'] 							= 'task';
+
+						$data['Requirement']['order_traking']					= 1;
+						$data['Requirement']['requirement_attachment_id']		= null;
+						$data['Requirement']['tracking_number']					= $maxNumTracking;
+						$data['Requirement']['to']								= 'to';
+						$data['Requirement']['description']						= $description;
+						$data['Requirement']['creator']							= $me;
+
+						$this->Requirement->RequirementTracking->save($data['Requirement']);
+
+					endif;
+				}
+
+				// GUARDAMOS TAREA DE MEMO
+				if (!empty($this->request->data['Memo'])) :
+					$memo = count($this->request->data['Memo']);
+					$memos = null;
+					for ($i = 0; $i < $memo; $i++) {
+						$memos .= $this->request->data['Memo'][$i]['memo_number'] . ',';
+					}
+					$data['Memo']['requirement_id'] 				= $requirement_id;
+
+					$this->Requirement->RequirementTracking->create();
+					$data['Memo']['requirement_tracking_type_id'] 	= '65b94f7c-fb7c-4c3c-a2b6-3df80a220016';	// DEBE CANBIAR EL TIPO DE MILESTONE
+					#$data['Memo']['milestone_id']					= $milestone_id;
+					$data['Memo']['order_traking']					= 2;
+					$data['Memo']['tracking_number']				= $maxNumTracking;
+					$data['Memo']['to']								= 'to';
+					$data['Memo']['creator']						= $creator;
+					$data['Memo']['description']					= $description;
+					$data['Memo']['memo_number']					= $memos;
+					$this->Requirement->RequirementTracking->save($data['Memo']);
+
+				endif;
+
+				// GUARDAMOS TAREA DE ADJUNTO
+				if (!empty($this->request->data['Attachment'])) :
+					$this->loadModel('RequirementAttachment');
+					$documento = count($this->request->data['Attachment']['data']);
+					for ($i = 0; $i < $documento; $i++) {
+						#$memos .= $this->request->data['Memo'][$i]['memo_number'] . ',';
+						$this->RequirementAttachment->create();
+						$data['Attachment']['requirement_attachment_type_id'] = '1b5b23c2-aefa-11ee-9bfa-00505692495c';	// DEBE CANBIAR EL TIPO DE MILESTONE
+						$data['Attachment']['name']		= $this->request->data['Attachment']['data'][$i]['name'];
+						$data['Attachment']['type']		= $this->request->data['Attachment']['data'][$i]['type'];
+						$data['Attachment']['size']		= $this->request->data['Attachment']['data'][$i]['size'];
+						if ($this->RequirementAttachment->save($data['Attachment'])) {
+							mkdir('../webroot/files_requirements/' . $this->RequirementAttachment->getInsertID(), 0777, true);
+							if (move_uploaded_file($this->request->data['Attachment']['data'][$i]['tmp_name'], '../webroot/files_requirements/' . $this->RequirementAttachment->getInsertID() . '/' . $data['Attachment']['name'])) {
+							} else {
+								rmdir($this->RequirementAttachment->getInsertID());
+							}
+						}
+						$this->Requirement->RequirementTracking->create();
+						$data['Requirement']['requirement_id'] 				 	= $this->request->data['Requirement']['requirement_id'];
+						$data['Requirement']['requirement_tracking_type_id'] 	= '65b951a7-c290-4159-82df-3df80a220016';
+						$data['Requirement']['requirement_attachment_id'] 	 	= $this->RequirementAttachment->getLastInsertId();
+						#$data['Requirement']['milestone_id']				 	= $this->request->data['Requirement']['milestone_id'];
+						$data['Requirement']['order_traking']					= 3;
+						$data['Requirement']['tracking_number']				 	= $maxNumTracking;
+						$data['Requirement']['to']								= 'to';
+						$data['Requirement']['creator']							= $this->request->data['Requirement']['creator'];
+						$data['Requirement']['description']						= $this->request->data['Requirement']['description'];
+						#$data['Attachment']['memo_number']	= $this->request->data['Memo']['memo_number'];
+						$this->Requirement->RequirementTracking->save($data['Requirement']);
+					}
+				endif;
+
+				// GUARDAMOS TAREA DE FECHA / TAREA ESPECIFICA
+				if (!empty($this->request->data['specific_task'])) :
+					$this->Requirement->RequirementTracking->create();
+					$data['Requirement']['requirement_id'] 					= $this->request->data['Requirement']['requirement_id'];
+					$data['Requirement']['milestone_id']					= $this->request->data['Requirement']['milestone_id'];
+					$data['Requirement']['tracking_number']					= $maxNumTracking;
+					$data['Requirement']['requirement_tracking_type_id'] 	= '661d61cb-c97c-44f3-84aa-09c10a320009'; // DEBE CANBIAR EL TIPO DE MILESTONE
+					$data['Requirement']['order_traking']					= 5;
+					#$data['Requirement']['approver']						= $this->request->data['Approval']['approver'];
+					#$data['Requirement']['approval_status']				= null;
+					//------------------------------------------------------------------------------------------------------
+					$data['Requirement']['creator']							= $this->request->data['Requirement']['creator'];
+					$data['Requirement']['description']						= $this->request->data['Requirement']['description'];
+					//------------------------------------------------------------------------------------------------------
+					$data['Requirement']['specific_task_date']				= $this->request->data['specific_task']['date'];
+					$data['Requirement']['specific_task_person']			= $this->request->data['specific_task']['person'];
+					$data['Requirement']['specific_task_description']		= $this->request->data['specific_task']['description'];
+					//------------------------------------------------------------------------------------------------------
+					$this->Requirement->RequirementTracking->save($data['Requirement']);
+				endif;
+
+				// GUARDAMOS TAREA DE COLABORADOR
+				if (!empty($this->request->data['Collaborator'])) :
+					$colaborante = $this->request->data['Collaborator']['collaborator'];;
+					$this->Requirement->RequirementTracking->create();
+					$data['Requirement']['requirement_id'] 					= $this->request->data['Requirement']['requirement_id'];
+					$data['Requirement']['requirement_tracking_type_id'] 	= '65b94f54-1c84-4ee4-863c-3df80a220016';
+					#$data['Requirement']['milestone_id']					= $this->request->data['Requirement']['milestone_id'];
+					$data['Requirement']['order_traking']					= 4;
+					$data['Requirement']['tracking_number']					= $maxNumTracking;
+					$data['Requirement']['to']								= 'to';
+					$data['Requirement']['creator']							= $this->request->data['Requirement']['creator'];
+					$data['Requirement']['description']						= $this->request->data['Requirement']['description'];
+					$data['Requirement']['collaborator']					= $colaborante;
+					#$data['Attachment']['memo_number']	= $this->request->data['Memo']['memo_number'];
+					$this->Requirement->RequirementTracking->save($data['Requirement']);
+					$this->contact_email(0, $colaborante, $this->request->data['Requirement']['requirement_id']);
+				endif;
+
+				// GUARDAMOS TAREA DE APROBRACION
+				if (!empty($this->request->data['Approval'])) :
+					$this->Requirement->RequirementTracking->create();
+					$data['Requirement']['requirement_id'] 					= $this->request->data['Requirement']['requirement_id'];
+					#$data['Requirement']['milestone_id']					= $this->request->data['Requirement']['milestone_id'];
+					$data['Requirement']['tracking_number']					= $maxNumTracking;
+					$data['Requirement']['requirement_tracking_type_id'] 	= '65c3a473-06c0-4bef-b594-3df8c26b1ae0'; // DEBE CANBIAR EL TIPO DE MILESTONE
+					$data['Requirement']['order_traking']					= 6;
+					$data['Requirement']['approver']						= $this->request->data['Approval']['approver'];
+					$data['Requirement']['approval_status']					= null;
+					$data['Requirement']['creator']							= $this->request->data['Requirement']['creator'];
+					$data['Requirement']['description']						= $this->request->data['Requirement']['description'];
+					$this->Requirement->RequirementTracking->save($data['Requirement']);
+				endif;
+			}
+
+			if ($this->request->data['continue'] == '') :
+				$this->Session->setFlash(__('Requirement Added'), 'flash/success');
+				return $this->redirect(
+					array('controller' => 'requirements', 'action' => 'home')
+				);
+			endif;
+		} else {
+
+			$this->loadModel('RequirementProcess');
+			$process		= $this->RequirementProcess->find('list', array('fields' => array('id', 'name')));
+			$requirement	= $this->Requirement->find('first', array('contain' => false, 'conditions' => array('Requirement.id' => $id)));
+
+			$conditionsTraking	= array(
+				'RequirementTracking.requirement_tracking_type_id' => '65c52553-eef0-4651-9175-3df8c26b1ae0',
+				'RequirementTracking.requirement_id' => $id
+			);
+			$processTasks = $this->RequirementProcess->find('first', $conditionsTraking);
+			$processTasksMaxCount = Count($processTasks['RequirementProcessTask']);
+
+			$conditionsTrakingMax	= array(
+				'RequirementTracking.requirement_tracking_type_id' => '65c52553-eef0-4651-9175-3df8c26b1ae0',
+				'RequirementTracking.requirement_id' => $id,
+				'order' => array(
+					'Requirement.modified' => 'ASC'
+				)
+			);
+			$processTasksMax = $this->Requirement->RequirementTracking->find('first', $conditionsTrakingMax);
+
+			foreach ($processTasksMax as $key => $value) {
+				if ($value['RequirementTracking']['requirement_process_tasks_id'] != '' and $value['RequirementTracking']['requirement_id'] == $id) {
+					$processTasksCount = ++$processTasksCount;
+				}
+			}
+
+			$this->set(compact(
+				'me',
+				'actuallyTasks',
+				'processTasksCount',	// NUMERO DE TAREA ACTUAL
+				'processTasksMaxCount',	// NUMERO DE TAREA MAXIMA
+				'requirement',
+				'process'
+			));
+		}
+	}
+
+
+	// ----------------------------
+	// 			HOME
+	// ----------------------------
+	public function home()
+	{
+		$usuario			= null;
+		$requirement	 	= null;
+		$nRequirement 		= null;
+		$misRequerimientos 	= null;
+		$collaRequirement 	= null;
+
+		$this->theme = 'Login2';
+
+		$usuario = $this->Auth->user('username');
+
+		$misRequerimientos = $this->Requirement->find(
+			'all',
+			array(
+				'recursive' => 1,
+				'conditions' => array(
+					#'creator' => $usuario
+				),
+				#'limit' => 1,
+				'order' => array(
+					'Requirement.modified' => 'DESC'
+				)
+			)
+		);
+
+
+		#debug($misRequerimientos);
+
+		$nRequirement = count($misRequerimientos);
+		$this->set(compact(
+			'usuario',
+			'nRequirement',
+			'misRequerimientos'
+		));
+	}
+	// ----------------------------
+
+
+	// MODAL DETALLE DASHBOARD
+	public function homeModal($idRequirement = null)
+	{
+		$usuario = $this->Auth->user('username');
+
+		// VISTA DE REQUERIMIENTOS CREADOS POR MI
+		$requi = $this->Requirement->RequirementTracking->find(
+			'all',
+			array(
+				'conditions' => array(
+					'RequirementTracking.requirement_id' => $idRequirement
+				),
+				'order' => array(
+					'RequirementTracking.tracking_number' => 'DESC',
+					//'RequirementTracking.modified' => 'DESC',
+					'RequirementTracking.order_traking' => 'ASC'
+				)
+			)
+		);
+
+		$this->loadModel('RequirementProcess');
+		$conditionsTraking	= array(
+			#'rescursive' => 1,
+			'RequirementTracking.requirement_tracking_type_id' => '65c52553-eef0-4651-9175-3df8c26b1ae0',
+			'RequirementTracking.requirement_id' => $idRequirement
+		);
+		$processTasks = $this->RequirementProcess->find('first', $conditionsTraking);
+		$processTasksCount = Count($processTasks['RequirementProcessTask']);
+
+		$result = Hash::combine($requi, '{n}.RequirementTracking.id', '{n}', '{n}.RequirementTracking.tracking_number');
+
+		$this->set(compact(
+			'idRequirement',
+			'result',
+			'processTasks', 		// TAREA ACTUAL 
+			'processTasksCount',	// TAREA MAX 
+			#'memoNumbers',
+			#'requirementTasks',
+			#'requi',
+			'usuario'
+		));
+
+		$this->render('/Elements/homeModal', 'ajax');
+	}
+
+	public function searchIdMemos($memoNumber = null, $memoYear = null)
+	{
+		// CONSULTAMOS EL idNUMERO DEL MEMO
+		$this->loadModel('Memo');
+		$conditions = array(
+			'conditions' => array(
+				'Memo.memo_number'	=> $memoNumber,
+				'Memo.year' 		=> $memoYear
+			)
+		);
+		$idMemos = $this->Memo->find('first', $conditions);
+
+		if (isset($idMemos['Memo']['id'])) {
+			$allIdMemos = $this->parent_child_memo($idMemos['Memo']['id']);
+			$allAttachMemos = $this->Memo->Attachment->find(
+				'all',
+				array(
+					'conditions' => array(
+						'OR' => array(
+							'memo_id' => $allIdMemos
+						)
+					)
+				)
+			);
+			return $allAttachMemos;
+		};
+	}
+
+
+	public function acceptedReception($memoNumber = null, $memoYear = null)
+	{
+		// CONSULTAMOS EL idNUMERO DEL MEMO
+		$this->loadModel('Memo');
+		$conditions = array(
+			'conditions' => array(
+				'Memo.memo_number'	=> $memoNumber,
+				'Memo.year' 		=> $memoYear
+			)
+		);
+		$idMemos = $this->Memo->find('first', $conditions);
+		if (isset($idMemos['Memo']['id'])) {
+			$allIdMemos = $this->parent_child_memo($idMemos['Memo']['id']);
+
+			$conditionsMemoTracking = array(
+				'conditions' => array(
+					'MemoTracking.memo_id' => $allIdMemos,
+					#'MemoTracking.memo_tracking_type_id' => '5b8588b3-667c-4f97-a1ec-1f68c26b1ae0'
+				)
+			);
+
+			$this->loadModel('MemoTracking');
+			$memoTracking = $this->MemoTracking->find('all', $conditionsMemoTracking);
+			foreach ($memoTracking as $key => $value) {
+				# code...
+				if (count($value['AcceptedReception']) > 0) {
+					#debug($value['AcceptedReception'][0]['id']);
+					return $value['AcceptedReception'][0]['id'];
+				}
+			}
+		};
+	}
+
+
+	public function supplierRatings($memoNumber = null, $memoYear = null)
+	{
+		// CONSULTAMOS EL idNUMERO DEL MEMO
+		$this->loadModel('Memo');
+		$conditions = array(
+			'conditions' => array(
+				'Memo.memo_number'	=> $memoNumber,
+				'Memo.year' 		=> $memoYear
+			)
+		);
+		$idMemos = $this->Memo->find('first', $conditions);
+		if (isset($idMemos['Memo']['id'])) {
+			$allIdMemos = $this->parent_child_memo($idMemos['Memo']['id']);
+
+			$conditionsMemoTracking = array(
+				'conditions' => array(
+					'MemoTracking.memo_id' => $allIdMemos,
+					#'MemoTracking.memo_tracking_type_id' => '5b8588b3-667c-4f97-a1ec-1f68c26b1ae0'
+				)
+			);
+
+			$this->loadModel('MemoTracking');
+			$memoTracking = $this->MemoTracking->find('all', $conditionsMemoTracking);
+			#debug($memoTracking);
+			foreach ($memoTracking as $key => $value) {
+				# code...
+				#debug($value['AcceptedReception']);
+				if (count($value['SupplierRating']) > 0) {
+					#debug($value['AcceptedReception'][0]['id']);
+					return $value['SupplierRating'][0]['id'];
+				}
+			}
+		};
+	}
+
+	// MODAL EXPEDIENTE DASHBOARD
+	public function homeModalExpediente($idRequirement = null)
+	{
+		$usuario = $this->Auth->user('username');
+		$this->loadModel('RequirementTracking');
+		// VISTA DE REQUERIMIENTOS CREADOS POR MI
+
+		$conditions = array(
+			'conditions' => array(
+				'RequirementTracking.requirement_id' => $idRequirement
+			)
+		);
+		$requi = $this->Requirement->RequirementTracking->find('all', $conditions);
+		#$resultExpediente = Hash::combine($requi, '{n}.RequirementTracking.id', '{n}', '{n}.RequirementTracking.tracking_number');
+
+		#echo $idRequirement;
+		#pr($requi);
+
+		$this->set(compact(
+			'idRequirement',
+			#'consulta',
+			'resultExpediente',
+			#'requi',
+			'usuario'
+		));
+		$this->render('/Elements/homeModalExpediente', 'ajax');
+	}
+
+	public function pdf($numberMemo = null, $download = null)
+	{
+		$this->loadModel('User');
+		$this->loadModel('Memo');
+
+		$numberMemo = explode('-', $numberMemo);
+		#debug($numberMemo);
+
+		$id = $this->Memo->field('id', array('memo_number' => $numberMemo[0], 'year' => $numberMemo[1]));
+
+		App::import('Controller', 'Users');
+		$UsersController = new UsersController;
+
+		if (!$this->Memo->exists($id)) {
+			throw new NotFoundException(__('Número de Memo invalido'));
+		}
+
+		$memosIds = $this->parent_child_memo($id);
+		$leadershipMemo = $this->Memo->MemoTracking->query('SELECT * FROM memo_trackings MemoTracking 
+            LEFT JOIN users User ON User.username = MemoTracking.to 
+            LEFT JOIN memos Memo ON Memo.id = MemoTracking.memo_id 
+            LEFT JOIN subrogances Subrogance ON Subrogance.id = MemoTracking.subrogance_id 
+            WHERE 
+                MemoTracking.viewed = false AND 
+                ((User.group_id = 2) OR (MemoTracking.subrogance_id IS NOT NULL) ) AND 
+                MemoTracking.memo_tracking_type_id = "5ba4f0ba-ec28-471e-af3e-2630c26b1ae0" AND 
+                MemoTracking.memo_id IN ("' . implode('","', $memosIds) . '")
+            ORDER BY MemoTracking.created DESC');
+
+		$memosIdsLeadership = Hash::combine($leadershipMemo, '{n}.Memo.id', '{n}.Memo.id');
+
+		$userTracking = $this->Memo->MemoTracking->query('SELECT * FROM memo_trackings MemoTracking LEFT JOIN users User ON User.username = MemoTracking.to LEFT JOIN memos Memo ON Memo.id = MemoTracking.memo_id WHERE MemoTracking.memo_id IN ("' . implode('","', $memosIdsLeadership) . '")');
+
+		$this->pdfConfig = array(
+			'download' => false,
+			'filename' => (!empty($leadershipMemo)) ? $leadershipMemo[0]['Memo']['reference'] . '.pdf' : 'sin respuesta.pdf',
+		);
+
+		$this->set(compact('leadershipMemo', 'userTracking', 'existSubroganceMemo', 'leadershipMemo'));
+	}
+
+	public function parent_child_memo($memoId = null)
+	{
+
+		$this->loadModel('Memo');
+
+		$childMemoId = $parentMemoId = NULL;
+
+		$childMemoId = $this->Memo->field('id', array('parent_id' => $memoId));
+		$parentMemoId = $this->Memo->field('parent_id', array('id' => $memoId));
+
+		if (($childMemoId) and empty($this->allMemoId[$childMemoId])) {
+			$this->allMemoId[$childMemoId] = $childMemoId;
+			$lastMemo = true;
+			$this->parent_child_memo($childMemoId, true);
+		}
+
+		if (($parentMemoId) and empty($this->allMemoId[$parentMemoId])) {
+			$this->allMemoId[$parentMemoId] = $parentMemoId;
+			$lastMemo = true;
+			$this->parent_child_memo($parentMemoId, true);
+		}
+
+		if (is_null($this->allMemoId)) $this->allMemoId[$memoId] = $memoId;
+
+		return $this->allMemoId;
+	}
+
+	//-------------------------------------------------------
+	// 			beforeFilter
+	//-------------------------------------------------------
+	public function beforeFilter()
+	{
+		// FORMA MULA DE DAR PERSMISOS A UNA VISTA
+		parent::beforeFilter();
+		$this->Auth->allow(
+			'login',
+			'search',
+			'pdf',
+			'home',
+			'homeModalExpediente',
+			'searchModal',
+			'contact_email',
+			'requirement_approval',
+			'homeModal',
+			'parent_child_memo',
+			'searchIdMemos',
+			'acceptedReception',
+			'supplierRatings'
+		);
+	}
+	//-------------------------------------------------------
+}

@@ -1,0 +1,172 @@
+
+<div class="row">
+    <div class="col-xs-12">
+		
+		<div class="box box-primary">
+			<div class="box-header">
+				<h3 class="box-title"><?php  echo __('Requirement'); ?></h3>
+				<div class="box-tools pull-right">
+	                <?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i> Edit'), array('action' => 'edit', $requirement['Requirement']['id']), array('class' => 'btn btn-primary', 'escape' => false)); ?>
+	            </div>
+			</div>
+			
+			<div class="box-body table-responsive">
+                <table id="Requirements" class="table table-bordered table-striped">
+					<tbody>
+						<tr>		<td><strong><?php echo __('Id'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['id']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Requirement Process'); ?></strong></td>
+		<td>
+			<?php echo $this->Html->link($requirement['RequirementProcess']['name'], array('controller' => 'requirement_processes', 'action' => 'view', $requirement['RequirementProcess']['id']), array('class' => '')); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Requirement Number'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['requirement_number']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Name'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['name']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Creator'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['creator']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Year'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['year']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Area'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['area']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Task'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['task']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Status'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['status']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Amount'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['amount']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Created'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['created']); ?>
+			&nbsp;
+		</td>
+</tr><tr>		<td><strong><?php echo __('Modified'); ?></strong></td>
+		<td>
+			<?php echo h($requirement['Requirement']['modified']); ?>
+			&nbsp;
+		</td>
+</tr>					</tbody>
+				</table><!-- /.table table-striped table-bordered -->
+			</div><!-- /.table-responsive -->
+			
+		</div><!-- /.view -->
+
+					
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title"><?php echo __('Related Requirement Trackings'); ?></h3>
+					<div class="box-tools pull-right">
+						<?php echo $this->Html->link('<i class="glyphicon glyphicon-plus"></i> '.__('New Requirement Tracking'), array('controller' => 'requirement_trackings', 'action' => 'add'), array('class' => 'btn btn-primary', 'escape' => false)); ?>					</div><!-- /.actions -->
+				</div>
+				<?php if (!empty($requirement['RequirementTracking'])): ?>
+					
+					<div class="box-body table-responsive">
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+											<th class="text-center"><?php echo __('Id'); ?></th>
+		<th class="text-center"><?php echo __('Requirement Id'); ?></th>
+		<th class="text-center"><?php echo __('Requirement Process Tasks Id'); ?></th>
+		<th class="text-center"><?php echo __('Requirement Tracking Type Id'); ?></th>
+		<th class="text-center"><?php echo __('Milestone Id'); ?></th>
+		<th class="text-center"><?php echo __('Requirement Attachment Id'); ?></th>
+		<th class="text-center"><?php echo __('Tracking Number'); ?></th>
+		<th class="text-center"><?php echo __('To'); ?></th>
+		<th class="text-center"><?php echo __('Memo Number'); ?></th>
+		<th class="text-center"><?php echo __('Creator'); ?></th>
+		<th class="text-center"><?php echo __('Name'); ?></th>
+		<th class="text-center"><?php echo __('Collaborator'); ?></th>
+		<th class="text-center"><?php echo __('Approver'); ?></th>
+		<th class="text-center"><?php echo __('Approval Status'); ?></th>
+		<th class="text-center"><?php echo __('Area'); ?></th>
+		<th class="text-center"><?php echo __('Description'); ?></th>
+		<th class="text-center"><?php echo __('Active'); ?></th>
+		<th class="text-center"><?php echo __('Multiple'); ?></th>
+		<th class="text-center"><?php echo __('Order Traking'); ?></th>
+		<th class="text-center"><?php echo __('Created'); ?></th>
+		<th class="text-center"><?php echo __('Modified'); ?></th>
+		<th class="text-center"><?php echo __('Specific Task Date'); ?></th>
+		<th class="text-center"><?php echo __('Specific Task Person'); ?></th>
+		<th class="text-center"><?php echo __('Specific Task Description'); ?></th>
+									<th class="text-center"><?php echo __('Actions'); ?></th>
+								</tr>
+							</thead>
+							<tbody>
+									<?php
+										$i = 0;
+										foreach ($requirement['RequirementTracking'] as $requirementTracking): ?>
+		<tr>
+			<td class="text-center"><?php echo $requirementTracking['id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['requirement_id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['requirement_process_tasks_id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['requirement_tracking_type_id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['milestone_id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['requirement_attachment_id']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['tracking_number']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['to']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['memo_number']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['creator']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['name']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['collaborator']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['approver']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['approval_status']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['area']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['description']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['active']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['multiple']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['order_traking']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['created']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['modified']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['specific_task_date']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['specific_task_person']; ?></td>
+			<td class="text-center"><?php echo $requirementTracking['specific_task_description']; ?></td>
+			<td class="text-center">
+				<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-eye-open"></i>'), array('controller' => 'requirement_trackings', 'action' => 'view', $requirementTracking['id']), array('class' => 'btn btn-primary btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'view')); ?>
+				<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-pencil"></i>'), array('controller' => 'requirement_trackings', 'action' => 'edit', $requirementTracking['id']), array('class' => 'btn btn-warning btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'edit')); ?>
+				<?php echo $this->Form->postLink(__('<i class="glyphicon glyphicon-trash"></i>'), array('controller' => 'requirement_trackings', 'action' => 'delete', $requirementTracking['id']), array('class' => 'btn btn-danger btn-xs', 'escape' => false, 'data-toggle'=>'tooltip', 'title' => 'delete'), __('Are you sure you want to delete # %s?', $requirementTracking['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+							</tbody>
+						</table><!-- /.table table-striped table-bordered -->
+					</div><!-- /.table-responsive -->
+					
+				<?php endif; ?>
+
+				
+				
+			</div><!-- /.related -->
+
+			
+	</div><!-- /#page-content .span9 -->
+
+</div><!-- /#page-container .row-fluid -->
+

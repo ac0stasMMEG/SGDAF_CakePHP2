@@ -1,0 +1,98 @@
+<style>
+    .icon-user {
+        background: url('../theme/Login/img/user.png') no-repeat left;
+        background-size: 25px;
+    }
+    .icon-lock {
+        background: url('../theme/Login/img/lock.png') no-repeat left;
+        background-size: 25px;
+    }
+
+</style>
+<?php clearstatcache(); ?>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    </head>   
+    <body class="hold-transition login-page">
+        <div class="login-box">
+            <div class="login-logo">
+                <b><?php echo __('System'); ?></b><?php echo __('Memorandum'); ?>
+            </div>
+            <!-- /.login-logo -->
+            <div class="login-box-body">
+                <p class="login-box-msg"><?php //echo __('Sign in to start your session'); ?></p>
+
+                <form action="login" method="post" id="login">
+                 
+                    <input name="data[User][username]" type="user" class="form-control icon-user" placeholder="<?php echo __('username'); ?>" required><br>
+ 
+                    <input name="data[User][password]" id="password" type="password" class="form-control icon-lock" placeholder="<?php echo __('use the same password on your computer'); ?>" required><br>
+
+                    <?php $this->Captcha->render(array('type'=>'image')); ?>
+
+                    <div  class="form-group has-feedback">
+                        <!-- /.col -->
+                        <div class="col-xs-6 col-xs-offset-3"><br>
+                            <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="glyphicon glyphicon-send"></i> <?php echo __('Sign In'); ?></button>
+                        </div>
+                        <!-- /.col -->
+                    </div><br><br><br>
+                    <?php echo $this->Session->flash(); ?>
+                </form><hr>
+                <div style="text-align:center">
+                    <?php echo __('¿Necesitas ayuda? - '); ?>
+                    <?php echo $this->Html->link(__('Ingresa aquí'), 'https://soporte.minmujeryeg.gob.cl/upload/login.php', array('target' => '_blank')); ?>
+                </div>    
+            </div>
+            <div><br><br>
+                <?php echo $this->Html->image("mmeg.png", array("width" => "100%")); ?>
+            <!-- /.login-box-body -->
+        </div>
+        <!-- /.login-box -->
+    </body>
+</html>
+<script>
+    /*var clicked = false;
+    
+    $("#no_robot").on("click", function() {
+        $("#login :checkbox").prop("checked", !clicked);
+        clicked = !clicked;
+    });*/
+    $(document).ready(function() {
+        localStorage.clear();
+    });
+
+    jQuery('.creload').on('click', function() {
+        var mySrc = $(this).prev().attr('src');
+        var glue = '?';
+        if(mySrc.indexOf('?')!=-1)  {
+            glue = '&';
+        }
+        $(this).prev().attr('src', mySrc + glue + new Date().getTime());
+        return false;
+    });
+
+    localStorage.removeItem("counter");
+
+    $(document).ready(function () {
+        $('#change_password').click(function () {
+
+            var pass =$(this).attr('class');
+            
+            if (pass.indexOf('fa-eye-slash') > -1) {
+                $('#password').attr('type', 'text');
+                $("#change_password").removeClass("fa-eye-slash");
+                $("#change_password").addClass('fa-eye');
+            } else {
+                $('#password').attr('type', 'password');
+                $("#change_password").removeClass("fa-eye");
+                $("#change_password").addClass('fa-eye-slash');
+            }
+        });
+    });
+    
+</script>
